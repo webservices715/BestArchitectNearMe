@@ -4,8 +4,9 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        barlow: ["Barlow", "sans-serif"],
         Josefin: ["Josefin Sans", "sans-serif"],
+        barlow: ['Barlow', 'sans-serif'],
+        sans: ['Roboto', 'sans-serif'],
       },
     },
   },
