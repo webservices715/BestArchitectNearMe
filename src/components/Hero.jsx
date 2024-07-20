@@ -1,15 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import heroBg from "../assets/herobg.jpg";
+import EnrollSidebar from "./EnrollSidebar";
 import HeroSideBar from "./HeroSideBar";
 
-function Hero() {
+const Hero = () => {
+
   return (
     <section>
       <div>
-        <HeroSideBar />
+        <HeroSideBar  />
+        {/* <EnrollSidebar /> */}
       </div>
       <div
-        className="hero-section h-screen bg-center "
+        className="hero-section h-screen bg-center"
         style={{ backgroundImage: `url(${heroBg})` }}
       ></div>
     </section>
