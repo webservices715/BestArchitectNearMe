@@ -18,7 +18,7 @@ function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="text-black font-Josefin bg-transparent font-semibold relative z-10">
+    <nav className="text-black font-Josefin bg-transparent font-semibold absolute w-[100%] z-10">
       <div className="container mx-auto flex flex-wrap items-center justify-between lg:justify-around  py-4 px-6">
         {/* Logo */}
         <div className="flex items-center space-x-2">
