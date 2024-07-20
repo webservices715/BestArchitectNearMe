@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import MainLogo from "../assets/MainLogo.png";
 import mobilenav from "../assets/mobilenav.png";
+import menu from "../assets/menu.png";
 import { CiSearch } from "react-icons/ci";
 import {
   FaWhatsapp,
@@ -10,14 +11,15 @@ import {
   FaTwitter,
   FaInstagram,
 } from "react-icons/fa";
-import { FiMenu, FiX } from "react-icons/fi";
+import { FiX } from "react-icons/fi";
+import { IoListCircleSharp } from "react-icons/io5";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="bg-gradient-to-r text-black font-Josefin font-semibold ">
-      <div className="container mx-auto flex flex-wrap items-center justify-between py-4 px-6">
+    <nav className="text-black font-Josefin bg-transparent font-semibold relative z-10">
+      <div className="container mx-auto flex flex-wrap items-center justify-between lg:justify-around  py-4 px-6">
         {/* Logo */}
         <div className="flex items-center space-x-2">
           <img
@@ -28,8 +30,8 @@ function Navbar() {
         </div>
 
         {/* Navigation items for large screens */}
-        <div className="hidden md:flex md:flex-wrap md:space-x-6 md:items-center md:text-xl">
-          <div className="flex flex-wrap space-x-6 md:space-x-6 md:space-y-0">
+        <div className="hidden lg:flex lg:flex-wrap lg:space-x-6 lg:items-center lg:text-xl">
+          <div className="flex flex-wrap space-x-6 lg:space-x-6 lg:space-y-0">
             <a href="#" className="hover:text-zinc-250">
               Home
             </a>
@@ -55,12 +57,12 @@ function Navbar() {
         </div>
 
         {/* Toggle icon and phone number/WhatsApp icon for medium screens */}
-        <div className="md:hidden flex items-center space-x-6">
+        <div className="lg:hidden flex items-center space-x-6">
           <button
             className="focus:outline-none"
             onClick={() => setIsOpen(!isOpen)}
           >
-            {isOpen ? <FiX size={25} /> : <FiMenu size={25} />}
+            {isOpen ? <FiX size={25} /> : <img src={menu} className="w-14" />}
           </button>
         </div>
 
