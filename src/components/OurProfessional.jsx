@@ -6,7 +6,7 @@ function OurProfessional() {
       <div className="main w-[90%] md:w-[80%] text-[#FFFFFF] flex flex-col md:flex-row items-center justify-between">
         <div className="left-section flex flex-col justify-center items-center w-fit relative mb-6 md:mb-0">
           <span
-            className="text-[120px] md:text-[240px] font-[800] font-barlow bg-[url('https://wp1.themevibrant.com/newwp/buildnox2/wp-content/themes/buildnox/assets/images/icons/text-bg.png')] bg-repeat uppercase"
+            className="text-[240px] md:text-[300px] font-bold font-barlow bg-[url('https://wp1.themevibrant.com/newwp/buildnox2/wp-content/themes/buildnox/assets/images/icons/text-bg.png')] bg-repeat uppercase"
             style={{
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
@@ -18,10 +18,10 @@ function OurProfessional() {
           </span>
           <span className="text-white absolute bottom-2 md:bottom-10 text-sm md:text-base">YEAR OF EXPERIENCE</span>
         </div>
-        <div className="middle-section flex flex-col justify-center w-full md:w-[30%] p-3 items-center mb-6 md:mb-0 text-center md:text-left">
-          <p className="uppercase text-[#FD4732] text-sm md:text-base">Our Professionals</p>
+        <div className="middle-section font-sans flex flex-col justify-center w-full md:w-[30%]  items-start mb-6 md:mb-0 text-center md:text-left">
+          <p className="uppercase text-[#FD4732] text-sm md:text-base py-3">Our Professionals</p>
           <p className="text-[#b5b6c5] text-base md:text-[1.4rem]">A Construction Company Based In London Group Working Since 1995</p>
-          <p className="flex flex-col items-center md:items-start mt-2">
+          <p className="flex flex-col items-center md:items-start">
             <span className="font-bold text-[3rem] md:text-[5rem]">150+</span>
             <span>HIGH SKILLED PEOPLE</span>
           </p>

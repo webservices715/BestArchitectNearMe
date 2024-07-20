@@ -5,6 +5,7 @@ export default {
     extend: {
       fontFamily: {
         barlow: ['Barlow', 'sans-serif'],
+        sans: ['Roboto', 'sans-serif'],
       },
     },
   },
