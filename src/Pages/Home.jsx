@@ -5,8 +5,8 @@ import OurProfessional from '../components/OurProfessional'
 function Home() {
   return (
     <div>
-      <Hero />
-       {/* <OurProfessional/> */}
+      <Hero/>
+       <OurProfessional/>
     </div>
   )
 }
