@@ -4,13 +4,11 @@ import { CiSearch } from "react-icons/ci";
 
 function Navbar() {
   return (
-          <nav className="bg-gradient-to-r text-black text-white">
+          <nav className="bg-gradient-to-r text-black ">
             <div className="container mx-auto flex items-center justify-between py-4 px-6">
               
               <div className="flex items-center space-x-2">
                 <img src={MainLogo} alt="Company Logo" className="h-20 w-20" />
-                {/* <span className="text-xl font-bold">Buildnox</span>
-                <span className="text-sm text-zinc-300">CONSTRUCTION</span> */}
               </div>
           
           <div className="hidden md:flex space-x-8 text-xl">
