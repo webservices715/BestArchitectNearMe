@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import MainLogo from "../assets/MainLogo.png";
 import mobilenav from "../assets/mobilenav.png";
-import menu from "../assets/menu.png";
+import { IoIosLogIn } from "react-icons/io";
 import { AiOutlineAlignRight } from "react-icons/ai";
 import { CiSearch } from "react-icons/ci";
 import {
@@ -94,9 +94,8 @@ function Navbar() {
 
           {/* Phone number and WhatsApp icon for large screens */}
           <div className="hidden md:flex items-center space-x-6">
-            <span className="hidden sm:inline text-xl hover:text-red-500">1800-456-7890</span>
-            <button className="hidden sm:inline focus:outline-none bg-[#1f212b] text-white py-6 px-3 rounded-b-full">
-              <FaWhatsapp size={40} />
+            <button className="hidden sm:flex items-center gap-2 focus:outline-none bg-white hover:text-white hover:bg-transparent border-2 border-white transition-all duration-500 ease-in-out transform hover:scale-105 text-black text-lg py-4 px-8  rounded-md ">
+              Enroll Now <IoIosLogIn size={25}/>
             </button>
           </div>
         </div>
