@@ -22,7 +22,9 @@ function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > scrollPos) {
+      if (window.scrollY === 0) {
+        setShowNavbar(true);
+      } else if (window.scrollY > scrollPos) {
         setShowNavbar(false);
       } else {
         setShowNavbar(true);
@@ -31,32 +33,29 @@ function Navbar() {
     };
 
     window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    return () => window.removeEventListener("scroll", handleScroll);
   }, [scrollPos]);
 
   return (
     <>
       <nav
-        className={`text-black font-Josefin bg-transparent font-semibold fixed w-[100%] z-10 transition-all duration-300 ease-in-out ${
-          showNavbar ? "translate-y-0 bg-black text-white" : "-translate-y-full"
+        className={`font-Josefin font-semibold fixed w-full z-10 text-white transition-all duration-300 ease-in-out ${
+          showNavbar
+            ? scrollPos > 0
+              ? "bg-[#1f212b]"
+              : "bg-transparent"
+            : "hidden"
         }`}
       >
         <div className="container mx-auto flex flex-wrap items-center justify-between lg:justify-around py-4 px-6">
           {/* Logo */}
           <div className="flex items-center space-x-2">
-            <img
-              src={MainLogo}
-              alt="Company Logo"
-              className="h-16 w-16 md:h-20 md:w-20"
-            />
+            <img src={mobilenav} alt="Company Logo" className="h-16 w-16 md:h-20 md:w-20" />
           </div>
 
           {/* Navigation items for large screens */}
-          <div className="hidden lg:flex lg:flex-wrap lg:space-x-6 lg:items-center lg:text-xl">
-            <div className="flex flex-wrap space-x-6 lg:space-x-6 lg:space-y-0">
+          <div className="hidden lg:flex lg:items-center lg:text-xl">
+            <div className="flex space-x-6 lg:space-x-6">
               <NavLink to="/" className="hover:text-zinc-250" activeClassName="text-red-500">
                 Home
               </NavLink>
@@ -84,22 +83,17 @@ function Navbar() {
             </button>
           </div>
 
-          {/* Toggle icon and phone number/WhatsApp icon for medium screens */}
+          {/* Toggle icon and phone/WhatsApp icon for medium screens */}
           <div className="lg:hidden flex items-center space-x-6">
-            <button
-              className="focus:outline-none"
-              onClick={() => setIsOpen(!isOpen)}
-            >
+            <button className="focus:outline-none" onClick={() => setIsOpen(!isOpen)}>
               {isOpen ? <FiX size={25} /> : <img src={menu} className="w-14" />}
             </button>
           </div>
 
           {/* Phone number and WhatsApp icon for large screens */}
           <div className="hidden md:flex items-center space-x-6">
-            <span className="hidden sm:inline text-xl hover:text-red-500">
-              1800-456-7890
-            </span>
-            <button className="hidden sm:inline focus:outline-none bg-[#151f2e] text-white py-6 px-3 rounded-b-full">
+            <span className="hidden sm:inline text-xl hover:text-red-500">1800-456-7890</span>
+            <button className="hidden sm:inline focus:outline-none bg-[#1f212b] text-white py-6 px-3 rounded-b-full">
               <FaWhatsapp size={40} />
             </button>
           </div>
@@ -118,76 +112,56 @@ function Navbar() {
               <ul className="flex flex-col px-6 space-y-4 text-lg">
                 <hr />
                 <li>
-                  <NavLink to="/" className="block py-[5px]" activeClassName="text-red-500" onClick={() => setIsOpen(false)}>
+                  <NavLink to="/" className="block py-1" activeClassName="text-red-500" onClick={() => setIsOpen(false)}>
                     HOME
                   </NavLink>
                 </li>
                 <hr />
                 <li>
-                  <NavLink to="/about" className="block py-[5px]" activeClassName="text-red-500" onClick={() => setIsOpen(false)}>
+                  <NavLink to="/about" className="block py-1" activeClassName="text-red-500" onClick={() => setIsOpen(false)}>
                     ABOUT
                   </NavLink>
                 </li>
                 <hr />
                 <li>
-                  <NavLink to="/services" className="block py-[5px]" activeClassName="text-red-500" onClick={() => setIsOpen(false)}>
+                  <NavLink to="/services" className="block py-1" activeClassName="text-red-500" onClick={() => setIsOpen(false)}>
                     SERVICES
                   </NavLink>
                 </li>
                 <hr />
                 <li>
-                  <NavLink to="/projects" className="block py-[5px]" activeClassName="text-red-500" onClick={() => setIsOpen(false)}>
+                  <NavLink to="/projects" className="block py-1" activeClassName="text-red-500" onClick={() => setIsOpen(false)}>
                     PROJECTS
                   </NavLink>
                 </li>
                 <hr />
                 <li>
-                  <NavLink to="/blog" className="block py-[5px]" activeClassName="text-red-500" onClick={() => setIsOpen(false)}>
+                  <NavLink to="/blog" className="block py-1" activeClassName="text-red-500" onClick={() => setIsOpen(false)}>
                     BLOG
                   </NavLink>
                 </li>
                 <hr />
                 <li>
-                  <NavLink to="/contact" className="block py-[5px]" activeClassName="text-red-500" onClick={() => setIsOpen(false)}>
+                  <NavLink to="/contact" className="block py-1" activeClassName="text-red-500" onClick={() => setIsOpen(false)}>
                     CONTACT
                   </NavLink>
                 </li>
                 <hr />
               </ul>
               <div className="flex justify-center space-x-8 mt-8">
-                <a
-                  href="https://www.facebook.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
+                <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
                   <FaFacebook size={25} />
                 </a>
-                <a
-                  href="https://www.linkedin.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
+                <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
                   <FaLinkedin size={25} />
                 </a>
-                <a
-                  href="https://www.skype.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
+                <a href="https://www.skype.com" target="_blank" rel="noopener noreferrer">
                   <FaSkype size={25} />
                 </a>
-                <a
-                  href="https://www.twitter.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
+                <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
                   <FaTwitter size={25} />
                 </a>
-                <a
-                  href="https://www.instagram.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
+                <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
                   <FaInstagram size={25} />
                 </a>
               </div>
@@ -198,11 +172,8 @@ function Navbar() {
         {/* Search Overlay */}
         {searchOpen && (
           <div className="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50">
-            <div className="text-white p-6 rounded-lg w-full h-full max-w-full relative">
-              <button
-                className="absolute top-4 right-4 text-white"
-                onClick={() => setSearchOpen(false)}
-              >
+            <div className="text-white p-6 rounded-lg w-full max-w-full relative">
+              <button className="absolute top-4 right-4 text-white" onClick={() => setSearchOpen(false)}>
                 <FiX size={40} />
               </button>
               <div className="flex items-center justify-center h-full">

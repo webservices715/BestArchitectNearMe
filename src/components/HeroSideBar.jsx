@@ -2,19 +2,15 @@ import React, { useState } from "react";
 import { FaFacebookF, FaInstagram, FaTwitter, FaPinterest, FaPhone, FaMapMarkerAlt, FaEnvelope, FaClock, FaPaperPlane } from 'react-icons/fa';
 import { HiMenuAlt1 } from "react-icons/hi";
 import MainLogo from "../assets/MainLogo.png";
-import '../App.css'; // Import the custom CSS file
+import '../App.css';
 
 const HeroSideBar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [email, setEmail] = useState('');
 
-    const toggleSidebar = () => {
-        setIsOpen(!isOpen);
-    };
+    const toggleSidebar = () => setIsOpen(!isOpen);
 
-    const handleInputChange = (e) => {
-        setEmail(e.target.value);
-    };
+    const handleInputChange = (e) => setEmail(e.target.value);
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -24,11 +20,8 @@ const HeroSideBar = () => {
     return (
         <>
             {/* Toggle Icon */}
-            <div className="absolute hidden md:block top-8 left-5 z-50 cursor-pointer rounded-full border border-white p-3 transition-all duration-500 ease-in-out transform hover:bg-red-500 text-white hover:scale-105">
-                <HiMenuAlt1
-                    size={30}
-                    onClick={toggleSidebar}
-                />
+            <div className="absolute hidden md:block top-8 left-6 z-50 cursor-pointer rounded-full border border-white p-3 transition-all duration-500 ease-in-out transform hover:bg-red-500 text-white hover:scale-105">
+                <HiMenuAlt1 size={30} onClick={toggleSidebar} />
             </div>
 
             {/* Semi-transparent Overlay */}
@@ -41,15 +34,11 @@ const HeroSideBar = () => {
 
             {/* Sidebar Content */}
             <div
-                className={`fixed inset-y-0 right-0 transform ${
-                    isOpen ? "translate-x-0" : "translate-x-full"
-                } transition-transform duration-500 ease-in-out bg-white shadow-lg w-[28rem] z-40 p-6 overflow-y-auto font-barlow custom-scrollbar`}
+                className={`fixed inset-y-0 right-0 transform ${isOpen ? "translate-x-0" : "translate-x-full"} transition-transform duration-500 ease-in-out bg-white shadow-lg w-[28rem] z-40 p-6 overflow-y-auto font-barlow custom-scrollbar`}
             >
                 <div className="p-4 flex justify-between items-center border-b">
                     <img src={MainLogo} alt="Logo" className="w-16" />
-                    <button onClick={toggleSidebar} className="text-gray-600 text-3xl transition-all duration-500 ease-in-out">
-                        ✕
-                    </button>
+                    <button onClick={toggleSidebar} className="text-gray-600 text-3xl transition-all duration-500 ease-in-out">✕</button>
                 </div>
 
                 <div className="p-4">
@@ -60,9 +49,9 @@ const HeroSideBar = () => {
                     <div className="border-t pt-6">
                         <h4 className="text-2xl mb-2 font-semibold text-[#172b56]">Contact Us</h4>
                         <p className="text-gray-600 flex items-center py-3 text-lg"><FaMapMarkerAlt className="mr-6 text-red-500" size={28} /> 54B, Tailstoit Town 5238 MT, La City, IA 522364</p>
-                        <p className="text-gray-600 flex items-center py-3 text-lg"><FaEnvelope className="mr-6 text-red-500" size={28} />info@example.com</p>
-                        <p className="text-gray-600 flex items-center py-3 text-lg"><FaPhone className="mr-6 text-red-500" size={28} />+1800-456-7890</p>
-                        <p className="text-gray-600 flex items-center py-3 text-lg"><FaClock className="mr-6 text-red-500" size={28} />9:30am to 6:30pm</p>
+                        <p className="text-gray-600 flex items-center py-3 text-lg"><FaEnvelope className="mr-6 text-red-500" size={28} /> info@example.com</p>
+                        <p className="text-gray-600 flex items-center py-3 text-lg"><FaPhone className="mr-6 text-red-500" size={28} /> +1800-456-7890</p>
+                        <p className="text-gray-600 flex items-center py-3 text-lg"><FaClock className="mr-6 text-red-500" size={28} /> 9:30am to 6:30pm</p>
                     </div>
                     <div className="border-t pt-10">
                         <h4 className="text-2xl mb-6 font-semibold text-[#172b56]">Let's Connect</h4>
@@ -84,15 +73,16 @@ const HeroSideBar = () => {
                     </div>
                 </div>
             </div>
+
             {/* Fixed Sidebar for Social Icons */}
-            <div className="h-full w-24 absolute top-0 left-0 bg-[#1f212b] text-white lg:flex flex-col items-center hidden">
+            <div className="h-[55rem] w-28 absolute top-0 left-0 bg-[#1f212b] text-white lg:flex flex-col items-center hidden">
                 <div className='py-10'></div>
-                <div className='lg:flex h-full flex-col items-center justify-end py-4 space-y-8'>
-                    <a href="#" className="hover:bg-gray-700 p-2 rounded transition-all duration-500 ease-in-out"><FaFacebookF size={22} /></a>
-                    <a href="#" className="hover:bg-gray-700 p-2 rounded transition-all duration-500 ease-in-out"><FaInstagram size={22} /></a>
-                    <a href="#" className="hover:bg-gray-700 p-2 rounded transition-all duration-500 ease-in-out"><FaTwitter size={22} /></a>
-                    <a href="#" className="hover:bg-gray-700 p-2 rounded transition-all duration-500 ease-in-out"><FaPinterest size={22} /></a>
-                    <a href="#" className="hover:bg-gray-700 p-2 rounded transition-all duration-500 ease-in-out"><FaPhone size={22} /></a>
+                <div className='lg:flex h-full flex-col items-center justify-center py-4 space-y-8'>
+                    <a href="#" className="hover:bg-red-500 p-3 rounded-full transition-all duration-500 ease-in-out"><FaFacebookF size={22} /></a>
+                    <a href="#" className="hover:bg-red-500 p-3 rounded-full transition-all duration-500 ease-in-out"><FaInstagram size={22} /></a>
+                    <a href="#" className="hover:bg-red-500 p-3 rounded-full transition-all duration-500 ease-in-out"><FaTwitter size={22} /></a>
+                    <a href="#" className="hover:bg-red-500 p-3 rounded-full transition-all duration-500 ease-in-out"><FaPinterest size={22} /></a>
+                    <a href="#" className="hover:bg-red-500 p-3 rounded-full transition-all duration-500 ease-in-out"><FaPhone size={22} /></a>
                 </div>
             </div>
         </>
