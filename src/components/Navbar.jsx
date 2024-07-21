@@ -5,9 +5,10 @@ import mobilenav from "../assets/mobilenav.png";
 import { IoIosLogIn } from "react-icons/io";
 import { AiOutlineAlignRight } from "react-icons/ai";
 import { CiSearch } from "react-icons/ci";
+
+
 import {
   FaWhatsapp,
-
   FaFacebook,
   FaLinkedin,
   FaSkype,
@@ -78,10 +79,10 @@ function Navbar() {
               </NavLink>
             </div>
             <button
-              className="focus:outline-none hover:bg-red-500 hover:text-white rounded-full ml-5 px-2 py-2 transition duration-150 ease-in-out"
+              className="focus:outline-none hover:bg-red-500 hover:text-white transition-all duration-500 ease-in-out transform  text-white hover:scale-105 rounded-full ml-5 px-2 py-2 "
               onClick={() => setSearchOpen(true)}
             >
-              <CiSearch size={25} />
+              <CiSearch size={26} />
             </button>
           </div>
 

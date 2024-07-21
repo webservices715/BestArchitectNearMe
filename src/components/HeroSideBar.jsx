@@ -1,8 +1,12 @@
 import React, { useState } from "react";
-import { FaFacebookF, FaInstagram, FaTwitter, FaPinterest, FaPhone, FaMapMarkerAlt, FaEnvelope, FaClock, FaPaperPlane } from 'react-icons/fa';
+import { FaFacebookF, FaInstagram, FaTwitter, FaPinterest, FaPhone, FaPaperPlane } from 'react-icons/fa';
 import { HiMenuAlt1 } from "react-icons/hi";
 import MainLogo from "../assets/MainLogo.png";
 import '../App.css';
+import { BiPhoneCall } from "react-icons/bi";
+import { LuMailCheck } from "react-icons/lu";
+import { FiClock } from "react-icons/fi";
+import { SlLocationPin } from "react-icons/sl";
 
 const HeroSideBar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -48,10 +52,10 @@ const HeroSideBar = () => {
                     </p>
                     <div className="border-t pt-6">
                         <h4 className="text-2xl mb-2 font-semibold text-[#172b56]">Contact Us</h4>
-                        <p className="text-gray-600 flex items-center py-3 text-lg"><FaMapMarkerAlt className="mr-6 text-red-500" size={28} /> 54B, Tailstoit Town 5238 MT, La City, IA 522364</p>
-                        <p className="text-gray-600 flex items-center py-3 text-lg"><FaEnvelope className="mr-6 text-red-500" size={28} /> info@example.com</p>
-                        <p className="text-gray-600 flex items-center py-3 text-lg"><FaPhone className="mr-6 text-red-500" size={28} /> +1800-456-7890</p>
-                        <p className="text-gray-600 flex items-center py-3 text-lg"><FaClock className="mr-6 text-red-500" size={28} /> 9:30am to 6:30pm</p>
+                        <p className="text-gray-600 flex items-center py-3 text-lg"><SlLocationPin className="mr-6 text-red-500" size={28} /> 54B, Tailstoit Town 5238 MT, La City, IA 522364</p>
+                        <p className="text-gray-600 flex items-center py-3 text-lg"><LuMailCheck className="mr-6 text-red-500" size={28} /> info@example.com</p>
+                        <p className="text-gray-600 flex items-center py-3 text-lg"><BiPhoneCall className="mr-6 text-red-500" size={28} /> +1800-456-7890</p>
+                        <p className="text-gray-600 flex items-center py-3 text-lg"><FiClock className="mr-6 text-red-500" size={28} /> 9:30am to 6:30pm</p>
                     </div>
                     <div className="border-t pt-10">
                         <h4 className="text-2xl mb-6 font-semibold text-[#172b56]">Let's Connect</h4>
@@ -75,7 +79,7 @@ const HeroSideBar = () => {
             </div>
 
             {/* Fixed Sidebar for Social Icons */}
-            <div className="h-[55rem] w-28 absolute top-0 left-0 bg-[#1f212b] opacity-65  lg:flex flex-col items-center hidden">
+            <div className="h-[55rem] w-28 absolute top-0 left-0 bg-[#1f212b] opacity-65  lg:flex flex-col items-center hidden ">
                 <div className='lg:flex h-full flex-col items-center justify-center py-4 space-y-8'>
                     <a href="#" className="hover:bg-red-500 p-3 rounded-full transition-all duration-500 ease-in-out text-white"><FaFacebookF size={22} /></a>
                     <a href="#" className="hover:bg-red-500 p-3 rounded-full transition-all duration-500 ease-in-out text-white"><FaInstagram size={22} /></a>
