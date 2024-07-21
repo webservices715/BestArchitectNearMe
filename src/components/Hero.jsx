@@ -9,10 +9,11 @@ function Hero() {
         <HeroSideBar />
       </div>
       <div
-        className="hero-section h-screen bg-center bg-cover font-sans"
+        className="hero-section h-[120vh]  font-sans bg-cover bg-no-repeat "
         style={{ backgroundImage: `url(${heroBg})` }}
       >
         <div className="info-section h-full flex flex-col justify-center pl-6 sm:pl-12 lg:pl-24 xl:pl-40">
+          <div className=" w-fit h-screen flex flex-col justify-center ">
           <p className="text-[2.5rem] sm:text-[4rem] md:text-[5rem] lg:text-[6rem] xl:text-[7rem] font-bold text-white leading-tight">
             <span>Archi</span>
             <span
@@ -36,6 +37,7 @@ function Hero() {
             <button className="text-white font-bold border border-white px-6 py-2 hover:bg-white hover:text-black transition duration-300">
               Discover Now
             </button>
+          </div>
           </div>
         </div>
       </div>
