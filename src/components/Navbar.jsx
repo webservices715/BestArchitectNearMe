@@ -72,7 +72,7 @@ function Navbar() {
           </div>
 
           {/* Phone number and WhatsApp icon for large screens */}
-          <div className="hidden md:flex items-center space-x-6">
+          <div className="hidden lg:flex items-center space-x-6">
             <span className="hidden sm:inline text-xl hover:text-red-500">
               1800-456-7890
             </span>

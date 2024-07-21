@@ -24,7 +24,7 @@ const HeroSideBar = () => {
     return (
         <>
             {/* Toggle Icon */}
-            <div className="fixed top-8 left-5 z-50 cursor-pointer rounded-full border border-white p-3 transition-all duration-500 ease-in-out transform hover:bg-red-500 text-white hover:scale-105">
+            <div className="fixed hidden md:block top-8 left-5 z-50 cursor-pointer rounded-full border border-white p-3 transition-all duration-500 ease-in-out transform hover:bg-red-500 text-white hover:scale-105">
                 <HiMenuAlt1
                     size={30}
                     onClick={toggleSidebar}
