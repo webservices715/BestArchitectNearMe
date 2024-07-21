@@ -37,7 +37,7 @@ function Hero() {
             </p>
             <div className="btn-section flex items-center gap-5 mt-8">
               <span className="border border-white w-12 h-0"></span>
-              <button className="text-white font-bold border border-white px-6 py-2 hover:bg-white hover:text-black transition duration-300">
+              <button className="text-white font-bold border border-white px-6 py-2 hover:bg-red-500 hover:text-white  transition duration-300">
                 Discover Now
               </button>
             </div>

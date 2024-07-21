@@ -1,0 +1,29 @@
+/* LoadingScreen.css */
+.loading-bar {
+    @apply w-1/3 h-full absolute top-0;
+  }
+  
+  .bar1 {
+    animation: slide 3s infinite;
+  }
+  
+  .bar2 {
+    animation: slide 3s infinite 1s;
+  }
+  
+  .bar3 {
+    animation: slide 3s infinite 2s;
+  }
+  
+  @keyframes slide {
+    0% {
+      transform: translateX(-100vw);
+    }
+    50% {
+      transform: translateX(100vw);
+    }
+    100% {
+      transform: translateX(-100vw);
+    }
+  }
+  
