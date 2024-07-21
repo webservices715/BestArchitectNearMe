@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 import MainLogo from "../assets/MainLogo.png";
 import mobilenav from "../assets/mobilenav.png";
 import menu from "../assets/menu.png";
+import { AiOutlineAlignRight } from "react-icons/ai";
 import { CiSearch } from "react-icons/ci";
 import {
   FaWhatsapp,
@@ -42,7 +43,7 @@ function Navbar() {
         className={`font-Josefin font-semibold fixed w-full z-10 text-white transition-all duration-300 ease-in-out ${
           showNavbar
             ? scrollPos > 0
-              ? "bg-[#1f212b]"
+              ? "bg-[#1f212b] opacity-95"
               : "bg-transparent"
             : "hidden"
         }`}
@@ -86,7 +87,7 @@ function Navbar() {
           {/* Toggle icon and phone/WhatsApp icon for medium screens */}
           <div className="lg:hidden flex items-center space-x-6">
             <button className="focus:outline-none" onClick={() => setIsOpen(!isOpen)}>
-              {isOpen ? <FiX size={25} /> : <img src={menu} className="w-14" />}
+              {isOpen ? <FiX size={25} /> : <AiOutlineAlignRight className="rounded-full border-2 border-white p-2 hover:bg-red-500 transition-all duration-500 ease-in-out transform  text-white hover:scale-105" size={50}/>}
             </button>
           </div>
 
@@ -100,74 +101,76 @@ function Navbar() {
         </div>
 
         {/* Mobile menu items */}
-        {isOpen && (
-          <div className="fixed inset-0 text-white z-50 flex flex-col p-4 bg-[#202020]">
-            <button className="self-end p-4" onClick={() => setIsOpen(false)}>
-              <FiX size={25} />
-            </button>
-            <div className="flex items-center mb-4">
-              <img src={mobilenav} alt="Buildnox" className="h-32 mr-1" />
-            </div>
-            <div className="flex-grow flex flex-col md:mt-4 mt-12">
-              <ul className="flex flex-col px-6 space-y-4 text-lg">
-                <hr />
-                <li>
-                  <NavLink to="/" className="block py-1" activeClassName="text-red-500" onClick={() => setIsOpen(false)}>
-                    HOME
-                  </NavLink>
-                </li>
-                <hr />
-                <li>
-                  <NavLink to="/about" className="block py-1" activeClassName="text-red-500" onClick={() => setIsOpen(false)}>
-                    ABOUT
-                  </NavLink>
-                </li>
-                <hr />
-                <li>
-                  <NavLink to="/services" className="block py-1" activeClassName="text-red-500" onClick={() => setIsOpen(false)}>
-                    SERVICES
-                  </NavLink>
-                </li>
-                <hr />
-                <li>
-                  <NavLink to="/projects" className="block py-1" activeClassName="text-red-500" onClick={() => setIsOpen(false)}>
-                    PROJECTS
-                  </NavLink>
-                </li>
-                <hr />
-                <li>
-                  <NavLink to="/blog" className="block py-1" activeClassName="text-red-500" onClick={() => setIsOpen(false)}>
-                    BLOG
-                  </NavLink>
-                </li>
-                <hr />
-                <li>
-                  <NavLink to="/contact" className="block py-1" activeClassName="text-red-500" onClick={() => setIsOpen(false)}>
-                    CONTACT
-                  </NavLink>
-                </li>
-                <hr />
-              </ul>
-              <div className="flex justify-center space-x-8 mt-8">
-                <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
-                  <FaFacebook size={25} />
-                </a>
-                <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
-                  <FaLinkedin size={25} />
-                </a>
-                <a href="https://www.skype.com" target="_blank" rel="noopener noreferrer">
-                  <FaSkype size={25} />
-                </a>
-                <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
-                  <FaTwitter size={25} />
-                </a>
-                <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
-                  <FaInstagram size={25} />
-                </a>
-              </div>
+        <div
+          className={`fixed inset-y-0 right-0 bg-[#202020] text-white z-50 flex flex-col p-4 overflow-y-auto transform transition-transform duration-300 ${
+            isOpen ? "translate-x-0" : "translate-x-full"
+          }`}
+        >
+          <button className="self-end p-4" onClick={() => setIsOpen(false)}>
+            <FiX size={25} />
+          </button>
+          <div className="flex items-center mb-4">
+            <img src={mobilenav} alt="Buildnox" className="h-32 mr-1" />
+          </div>
+          <div className="flex-grow flex flex-col md:mt-4 mt-12">
+            <ul className="flex flex-col px-6 space-y-4 text-lg">
+              <hr />
+              <li>
+                <NavLink to="/" className="block py-1" activeClassName="text-red-500" onClick={() => setIsOpen(false)}>
+                  HOME
+                </NavLink>
+              </li>
+              <hr />
+              <li>
+                <NavLink to="/about" className="block py-1" activeClassName="text-red-500" onClick={() => setIsOpen(false)}>
+                  ABOUT
+                </NavLink>
+              </li>
+              <hr />
+              <li>
+                <NavLink to="/services" className="block py-1" activeClassName="text-red-500" onClick={() => setIsOpen(false)}>
+                  SERVICES
+                </NavLink>
+              </li>
+              <hr />
+              <li>
+                <NavLink to="/projects" className="block py-1" activeClassName="text-red-500" onClick={() => setIsOpen(false)}>
+                  PROJECTS
+                </NavLink>
+              </li>
+              <hr />
+              <li>
+                <NavLink to="/blog" className="block py-1" activeClassName="text-red-500" onClick={() => setIsOpen(false)}>
+                  BLOG
+                </NavLink>
+              </li>
+              <hr />
+              <li>
+                <NavLink to="/contact" className="block py-1" activeClassName="text-red-500" onClick={() => setIsOpen(false)}>
+                  CONTACT
+                </NavLink>
+              </li>
+              <hr />
+            </ul>
+            <div className="flex justify-center space-x-8 mt-8">
+              <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+                <FaFacebook size={25} />
+              </a>
+              <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
+                <FaLinkedin size={25} />
+              </a>
+              <a href="https://www.skype.com" target="_blank" rel="noopener noreferrer">
+                <FaSkype size={25} />
+              </a>
+              <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
+                <FaTwitter size={25} />
+              </a>
+              <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+                <FaInstagram size={25} />
+              </a>
             </div>
           </div>
-        )}
+        </div>
 
         {/* Search Overlay */}
         {searchOpen && (
