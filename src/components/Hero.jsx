@@ -35,8 +35,14 @@ function Hero() {
           </div>
         </div>
       </div>
+      <div
+        className="hero-section h-screen bg-center"
+        style={{ backgroundImage: `url(${heroBg})` }}
+      ></div>
     </section>
+  );
   );
 }
 
+export default Hero;
 export default Hero;
