@@ -13,8 +13,8 @@ function Hero() {
         style={{ backgroundImage: `url(${heroBg})` }}
       >
         <div className="info-section h-full flex flex-col justify-center px-6 sm:px-12 lg:px-24 xl:px-40">
-          <div className="w-fit h-[70vh] flex flex-col justify-center ml-4 sm:ml-10 md:ml-20 font-sans absolute top-[12vh] sm:top-[20vh] lg:top-[25vh]">
-            <p className="text-[4rem] sm:text-[3rem] md:text-[4rem] lg:text-[5rem] xl:text-[6rem] font-extrabold text-white leading-none">
+          <div className="w-fit h-[70vh] flex flex-col justify-center ml-4 sm:ml-10 md:ml-20 font-sans absolute top-[12vh] sm:top-[20vh] lg:top-[20vh]">
+            <p className="text-[4rem] sm:text-[3rem] md:text-[4rem] lg:text-[5rem] xl:text-[7rem] font-extrabold text-white leading-none">
               <span>Archi</span>
               <span
                 className="text-transparent"
@@ -26,7 +26,9 @@ function Hero() {
                 tect
               </span>
             </p>
-            <p className="text-white text-[3rem] sm:text-[zrem] md:text-[3rem] lg:text-[4rem] xl:text-[5rem] font-light leading-none">
+            <p className="text-white text-[3rem] sm:text-[zrem] md:text-[3rem] lg:text-[4rem] xl:text-[5rem] leading-none"
+             style={{fontWeight:"lighter"}}
+            >
               Specialists
             </p>
             <p className="w-full sm:w-2/3 lg:w-[43%] mt-4 sm:mt-6 text-xl leading-relaxed sm:text-base md:text-lg lg:text-xl font-thin text-white tracking-wide">
