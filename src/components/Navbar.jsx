@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import MainLogo from "../assets/MainLogo.png";
 import mobilenav from "../assets/mobilenav.png";
@@ -17,10 +17,33 @@ import { FiX } from "react-icons/fi";
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
+  const [showNavbar, setShowNavbar] = useState(true);
+  const [scrollPos, setScrollPos] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > scrollPos) {
+        setShowNavbar(false);
+      } else {
+        setShowNavbar(true);
+      }
+      setScrollPos(window.scrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [scrollPos]);
 
   return (
     <>
-      <nav className="text-black font-Josefin bg-transparent font-semibold absolute w-[100%] z-10">
+      <nav
+        className={`text-black font-Josefin bg-transparent font-semibold fixed w-[100%] z-10 transition-all duration-300 ease-in-out ${
+          showNavbar ? "translate-y-0 bg-black text-white" : "-translate-y-full"
+        }`}
+      >
         <div className="container mx-auto flex flex-wrap items-center justify-between lg:justify-around py-4 px-6">
           {/* Logo */}
           <div className="flex items-center space-x-2">
@@ -72,7 +95,7 @@ function Navbar() {
           </div>
 
           {/* Phone number and WhatsApp icon for large screens */}
-          <div className="hidden lg:flex items-center space-x-6">
+          <div className="hidden md:flex items-center space-x-6">
             <span className="hidden sm:inline text-xl hover:text-red-500">
               1800-456-7890
             </span>
@@ -186,7 +209,7 @@ function Navbar() {
                 <input
                   type="text"
                   placeholder="Search..."
-                  className="w-full max-w-2xl px-4 py-6 rounded-l-lg border-none outline-none  text-black"
+                  className="w-full max-w-2xl px-4 py-6 rounded-l-lg border-none outline-none text-black"
                 />
                 <button className="bg-red-500 text-white px-8 py-[1.3rem] rounded-r-lg flex items-center">
                   <CiSearch size={30} />

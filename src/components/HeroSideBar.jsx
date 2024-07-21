@@ -24,7 +24,7 @@ const HeroSideBar = () => {
     return (
         <>
             {/* Toggle Icon */}
-            <div className="fixed hidden md:block top-8 left-5 z-50 cursor-pointer rounded-full border border-white p-3 transition-all duration-500 ease-in-out transform hover:bg-red-500 text-white hover:scale-105">
+            <div className="absolute hidden md:block top-8 left-5 z-50 cursor-pointer rounded-full border border-white p-3 transition-all duration-500 ease-in-out transform hover:bg-red-500 text-white hover:scale-105">
                 <HiMenuAlt1
                     size={30}
                     onClick={toggleSidebar}
@@ -85,7 +85,7 @@ const HeroSideBar = () => {
                 </div>
             </div>
             {/* Fixed Sidebar for Social Icons */}
-            <div className="h-full w-24 fixed top-0 left-0 bg-[#1f212b] text-white lg:flex flex-col items-center hidden">
+            <div className="h-full w-24 absolute top-0 left-0 bg-[#1f212b] text-white lg:flex flex-col items-center hidden">
                 <div className='py-10'></div>
                 <div className='lg:flex h-full flex-col items-center justify-end py-4 space-y-8'>
                     <a href="#" className="hover:bg-gray-700 p-2 rounded transition-all duration-500 ease-in-out"><FaFacebookF size={22} /></a>
