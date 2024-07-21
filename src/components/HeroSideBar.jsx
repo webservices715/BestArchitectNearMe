@@ -75,7 +75,7 @@ const HeroSideBar = () => {
             </div>
 
             {/* Fixed Sidebar for Social Icons */}
-            <div className="h-[55rem] w-28 absolute top-0 left-0 bg-[#1f212b] text-white lg:flex flex-col items-center hidden">
+            <div className="h-[55rem] w-28 absolute top-0 left-0 bg-[#1f212b] opacity-65 text-white lg:flex flex-col items-center hidden">
                 <div className='py-10'></div>
                 <div className='lg:flex h-full flex-col items-center justify-center py-4 space-y-8'>
                     <a href="#" className="hover:bg-red-500 p-3 rounded-full transition-all duration-500 ease-in-out"><FaFacebookF size={22} /></a>
