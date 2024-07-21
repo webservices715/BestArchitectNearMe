@@ -75,14 +75,13 @@ const HeroSideBar = () => {
             </div>
 
             {/* Fixed Sidebar for Social Icons */}
-            <div className="h-[55rem] w-28 absolute top-0 left-0 bg-[#1f212b] opacity-65 text-white lg:flex flex-col items-center hidden">
-                <div className='py-10'></div>
+            <div className="h-[55rem] w-28 absolute top-0 left-0 bg-[#1f212b] opacity-65  lg:flex flex-col items-center hidden">
                 <div className='lg:flex h-full flex-col items-center justify-center py-4 space-y-8'>
-                    <a href="#" className="hover:bg-red-500 p-3 rounded-full transition-all duration-500 ease-in-out"><FaFacebookF size={22} /></a>
-                    <a href="#" className="hover:bg-red-500 p-3 rounded-full transition-all duration-500 ease-in-out"><FaInstagram size={22} /></a>
-                    <a href="#" className="hover:bg-red-500 p-3 rounded-full transition-all duration-500 ease-in-out"><FaTwitter size={22} /></a>
-                    <a href="#" className="hover:bg-red-500 p-3 rounded-full transition-all duration-500 ease-in-out"><FaPinterest size={22} /></a>
-                    <a href="#" className="hover:bg-red-500 p-3 rounded-full transition-all duration-500 ease-in-out"><FaPhone size={22} /></a>
+                    <a href="#" className="hover:bg-red-500 p-3 rounded-full transition-all duration-500 ease-in-out text-white"><FaFacebookF size={22} /></a>
+                    <a href="#" className="hover:bg-red-500 p-3 rounded-full transition-all duration-500 ease-in-out text-white"><FaInstagram size={22} /></a>
+                    <a href="#" className="hover:bg-red-500 p-3 rounded-full transition-all duration-500 ease-in-out text-white"><FaTwitter size={22} /></a>
+                    <a href="#" className="hover:bg-red-500 p-3 rounded-full transition-all duration-500 ease-in-out text-white"><FaPinterest size={22} /></a>
+                    <a href="#" className="hover:bg-red-500 p-3 rounded-full transition-all duration-500 ease-in-out text-white"><FaPhone size={22} /></a>
                 </div>
             </div>
         </>

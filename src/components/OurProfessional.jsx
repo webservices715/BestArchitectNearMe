@@ -6,7 +6,7 @@ function OurProfessional() {
       <div className="main w-[90%] md:w-[80%] text-[#FFFFFF] flex flex-col md:flex-row items-center justify-between">
         <div className="left-section flex flex-col justify-center items-center w-fit relative mb-6 md:mb-0">
           <span
-            className="text-[240px] md:text-[320px]  font-barlow bg-[url('https://wp1.themevibrant.com/newwp/buildnox2/wp-content/themes/buildnox/assets/images/icons/text-bg.png')] bg-repeat uppercase"
+            className="text-[240px] md:text-[320px]  font-barlow bg-[url('https://images.pexels.com/photos/325185/pexels-photo-325185.jpeg?auto=compress&cs=tinysrgb&w=600')] bg-repeat uppercase"
             style={{
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',

@@ -55,7 +55,7 @@ function Navbar() {
 
           {/* Navigation items for large screens */}
           <div className="hidden lg:flex lg:items-center lg:text-xl">
-            <div className="flex space-x-6 lg:space-x-6">
+            <div className="flex space-x-6 lg:space-x-7">
               <NavLink to="/" className="hover:text-zinc-250" activeClassName="text-red-500">
                 Home
               </NavLink>
@@ -76,7 +76,7 @@ function Navbar() {
               </NavLink>
             </div>
             <button
-              className="focus:outline-none hover:bg-red-500 hover:text-white rounded-full px-2 py-2 transition duration-150 ease-in-out"
+              className="focus:outline-none hover:bg-red-500 hover:text-white rounded-full ml-5 px-2 py-2 transition duration-150 ease-in-out"
               onClick={() => setSearchOpen(true)}
             >
               <CiSearch size={25} />
