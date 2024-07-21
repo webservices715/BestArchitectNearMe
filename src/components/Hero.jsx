@@ -26,7 +26,7 @@ function Hero() {
                 tect
               </span>
             </p>
-            <p className="text-xl sm:text-2xl md:text-2xl lg:text-4xl xl:text-5xl text-white font-thin leading-tight mt-2">
+            <p className="text-white text-[3rem] font-thin leading-tight mt-2">
               Specialists
             </p>
             <p className="w-full sm:w-2/3 lg:w-1/3 mt-6 text-sm sm:text-base md:text-[20px] lg:text-lg font-thin text-white tracking-wide">
