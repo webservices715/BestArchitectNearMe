@@ -4,6 +4,8 @@ import Navbar from "./components/Navbar";
 import About from "./Pages/About";
 import Home from "./Pages/Home";
 import LoadingScreen from "./components/Loading";
+import Footer from "./components/Footer";
+
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -26,6 +28,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
           </Routes>
+          <Footer />
         </>
       )}
     </>

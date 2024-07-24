@@ -1,10 +1,15 @@
 import React from 'react'
 import AboutBanner from '../components/AboutBanner'
+import AboutSection from '../components/AboutSection '
+import OurStory from '../components/OurStory'
 
 function About() {
   return (
-    <div>
+    <div className='pt-24 bg-gray-50'>
       <AboutBanner />
+      <AboutSection />
+    <OurStory />
+
     </div>
   )
 }
