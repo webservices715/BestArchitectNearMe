@@ -83,15 +83,6 @@ function Navbar() {
                 About
               </NavLink>
               <NavLink
-                to="/services"
-                className={`hover:text-zinc-250 ${
-                  isHomePage ? "text-white" : "text-black"
-                }`}
-                activeClassName="text-red-500"
-              >
-                Services
-              </NavLink>
-              <NavLink
                 to="/projects"
                 className={`hover:text-zinc-250 ${
                   isHomePage ? "text-white" : "text-black"

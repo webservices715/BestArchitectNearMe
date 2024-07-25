@@ -38,21 +38,6 @@ function Footer() {
           <NavLink to="/" onClick={() => smoothScrollTo("home")}>
             <img src={mobilenav} alt="GREDX" className="w-60" />
           </NavLink>
-          <div className="relative  text-gray-500 focus-within:text-gray-900 ">
-            <div className="absolute inset-y-0 right-6 flex items-center pl-3 pointer-events-none ">
-              <FaRegCircleQuestion size={18} />
-            </div>
-            <NavLink
-              to="#contact"
-              onClick={() => {
-                smoothScrollTo("contact");
-              }}
-              id="default-search"
-              className="block w-full lg:min-w-[448px] pr-12 pl-6 py-3 text-base font-normal shadow-xs text-gray-50 bg-transparent border border-gray-700 rounded-full placeholder-gray-400 focus:outline-none leading-relaxed transition-all duration-500 "
-            >
-              Have a question? talk to us
-            </NavLink>
-          </div>
         </div>
         <div className="py-14 flex flex-col lg:flex-row justify-between gap-8 border-b border-gray-500">
           <div className="w-full max-lg:mx-auto flex flex-col sm:flex-row max-lg:items-center max-lg:justify-between gap-6 md:gap-12 lg:gap-60">
@@ -63,7 +48,7 @@ function Footer() {
               <ul className="flex flex-col max-lg:items-center gap-6">
                 <li>
                   <NavLink
-                    to="#home"
+                    to="#"
                     onClick={() => smoothScrollTo("home")}
                     className="text-base font-normal max-lg:text-center text-gray-400 whitespace-nowrap transition-all duration-300 hover:text-red-600 focus-within:outline-0 focus-within:text-red-600"
                   >
@@ -72,36 +57,36 @@ function Footer() {
                 </li>
                 <li>
                   <NavLink
-                    to="#services"
+                    to="/about"
                     onClick={() => smoothScrollTo("home")}
                     className="text-base font-normal max-lg:text-center text-gray-400 whitespace-nowrap transition-all duration-300 hover:text-red-600 focus-within:outline-0 focus-within:text-red-600"
                   >
-                    Services
+                    About
                   </NavLink>
                 </li>
                 <li>
                   <NavLink
-                    to="#works"
+                    to="/contact"
                     onClick={() => smoothScrollTo("home")}
                     className="text-base font-normal max-lg:text-center text-gray-400 whitespace-nowrap transition-all duration-300 hover:text-red-600 focus-within:outline-0 focus-within:text-red-600"
                   >
-                    Work
+                    Contact
                   </NavLink>
                 </li>
                 <li>
                   <NavLink
-                    to="#technologies"
+                    to="/blog"
                     onClick={() => smoothScrollTo("home")}
                     className="text-base font-normal max-lg:text-center text-gray-400 whitespace-nowrap transition-all duration-300 hover:text-red-600 focus-within:outline-0 focus-within:text-red-600"
                   >
-                    Tech at GREDX
+                    Blogs
                   </NavLink>
                 </li>
               </ul>
             </div>
             <div className="">
               <h6 className="text-lg font-medium text-white mb-7 max-lg:text-center">
-                SERVICES
+                Useful Links
               </h6>
               <ul className="flex flex-col gap-6 max-lg:items-center">
                 <li>
@@ -110,8 +95,7 @@ function Footer() {
                     onClick={() => smoothScrollTo("services")}
                     className="text-base font-normal text-gray-400 whitespace-nowrap transition-all duration-300 hover:text-red-600 focus-within:outline-0 focus-within:text-red-600"
                   >
-                    {" "}
-                    Website Development
+                    Architect
                   </NavLink>
                 </li>
                 <li>
@@ -120,7 +104,7 @@ function Footer() {
                     onClick={() => smoothScrollTo("services")}
                     className="text-base font-normal text-gray-400 whitespace-nowrap transition-all duration-300 hover:text-red-600 focus-within:outline-0 focus-within:text-red-600"
                   >
-                    Logo Design
+                    Hiring
                   </NavLink>
                 </li>
                 <li>
@@ -129,47 +113,15 @@ function Footer() {
                     onClick={() => smoothScrollTo("services")}
                     className="text-base font-normal text-gray-400 whitespace-nowrap transition-all duration-300 hover:text-red-600 focus-within:outline-0 focus-within:text-red-600"
                   >
-                    App Development
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink
-                    to="#services"
-                    onClick={() => smoothScrollTo("services")}
-                    className="text-base font-normal text-gray-400 whitespace-nowrap transition-all duration-300 hover:text-red-600 focus-within:outline-0 focus-within:text-red-600"
-                  >
-                    UI/UX Design
+                    Projects
                   </NavLink>
                 </li>
               </ul>
             </div>
-            {/* <div className="">
-              <h6 className="text-lg font-medium text-white mb-7 max-lg:text-center">
-                Resources
-              </h6>
-              <ul className="flex flex-col gap-6 max-lg:items-center">
-                <li>
-                  <a
-                    href="javascript:;"
-                    className="text-base font-normal text-gray-400 whitespace-nowrap transition-all duration-300 hover:text-red-600 focus-within:outline-0 focus-within:text-red-600"
-                  >
-                    Privacy policy
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="javascript:;"
-                    className="text-base font-normal text-gray-400 whitespace-nowrap transition-all duration-300 hover:text-red-600 focus-within:outline-0 focus-within:text-red-600"
-                  >
-                    Quick Start
-                  </a>
-                </li>
-              </ul>
-            </div> */}
           </div>
           <div className="w-full lg:max-w-md max-lg:mx-auto ">
             <h6 className="text-lg font-medium text-white mb-7">GET CONTACT</h6>
-            <div className="bg-gray-800 rounded-3xl p-5">
+            <div className="bg-gray-800 rounded-xl p-5">
               <form action="#" className="flex flex-col gap-5">
                 <div className="relative">
                   <label className="flex  items-center mb-2 text-gray-400 text-base font-medium">
@@ -255,7 +207,6 @@ function Footer() {
               <FaXTwitter />
             </a>
           </div>
-         
         </div>
       </div>
     </section>

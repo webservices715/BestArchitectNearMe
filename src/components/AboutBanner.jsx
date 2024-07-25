@@ -42,7 +42,7 @@ const AboutBanner = () => {
             </div>
           </div>
           <div className="flex justify-center items-center mt-12">
-            <h1 className="text-white md:text-5xl text-4xl font-barlow font-bold">About Us</h1>
+            <h1 className="text-white md:text-5xl text-4xl font-barlow font-semibold">About Us</h1>
           </div>
         </div>
       </div>
