@@ -46,7 +46,7 @@ function Navbar() {
         className={`font-Josefin font-semibold fixed w-full z-10 text-white transition-all duration-300 ease-in-out ${
           showNavbar
             ? scrollPos > 0
-              ? "bg-[#1f212b]  opacity-95 "
+              ? `bg-[#1f212b]  opacity-95 shadow-lg  `
               : "bg-transparent"
             : "hidden"
         }`}
@@ -92,7 +92,7 @@ function Navbar() {
                 Projects
               </NavLink>
               <NavLink
-                to="/blog"
+                to="/blogs"
                 className={`hover:text-zinc-250 ${
                   isHomePage ? "text-white" : "text-black"
                 }`}
@@ -204,7 +204,7 @@ function Navbar() {
               <hr />
               <li>
                 <NavLink
-                  to="/blog"
+                  to="/blogs"
                   className="block py-1"
                   activeClassName="text-red-500"
                   onClick={() => setIsOpen(false)}
@@ -267,7 +267,7 @@ function Navbar() {
 
         {/* Search Overlay */}
         {searchOpen && (
-          <div className="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50">
+          <div className="fixed  inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50">
             <div className="text-white p-6 rounded-lg w-full max-w-full relative">
               <button
                 className={`absolute top-4 right-4`}

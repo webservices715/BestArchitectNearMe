@@ -92,7 +92,7 @@ const RecentProject = () => {
           </div>
           <div className="flex flex-wrap -mx-4">
             <PortfolioCard
-              ImageHref="https://i.ibb.co/64WfFPt/image-01.jpg"
+              ImageHref="https://images.pexels.com/photos/8438980/pexels-photo-8438980.jpeg?auto=compress&cs=tinysrgb&w=600"
               category="Residential"
               title="Modern Family Home"
               button="View Details"
@@ -100,7 +100,7 @@ const RecentProject = () => {
               showCard={showCard}
             />
             <PortfolioCard
-              ImageHref="https://i.ibb.co/PT7ghRs/image-06.jpg"
+              ImageHref="https://images.pexels.com/photos/8721318/pexels-photo-8721318.jpeg?auto=compress&cs=tinysrgb&w=600"
               category="Commercial"
               title="Corporate Office Space"
               button="View Details"
@@ -108,7 +108,7 @@ const RecentProject = () => {
               showCard={showCard}
             />
             <PortfolioCard
-              ImageHref="https://i.ibb.co/vkt8C1P/image-02.jpg"
+              ImageHref="https://images.pexels.com/photos/4069289/pexels-photo-4069289.jpeg?auto=compress&cs=tinysrgb&w=600"
               category="Landscape"
               title="Urban Park Design"
               button="View Details"
@@ -116,7 +116,7 @@ const RecentProject = () => {
               showCard={showCard}
             />
             <PortfolioCard
-              ImageHref="https://i.ibb.co/3FKqS1G/image-03.jpg"
+              ImageHref="https://images.pexels.com/photos/1366957/pexels-photo-1366957.jpeg?auto=compress&cs=tinysrgb&w=600"
               category="Interior"
               title="Luxury Apartment Interior"
               button="View Details"
@@ -124,7 +124,7 @@ const RecentProject = () => {
               showCard={showCard}
             />
             <PortfolioCard
-              ImageHref="https://i.ibb.co/m6dq2fX/image-04.jpg"
+              ImageHref="https://images.pexels.com/photos/24424288/pexels-photo-24424288/free-photo-of-fire-dance-at-night.jpeg?auto=compress&cs=tinysrgb&w=600"
               category="Residential"
               title="Eco-friendly Villa"
               button="View Details"
@@ -132,7 +132,7 @@ const RecentProject = () => {
               showCard={showCard}
             />
             <PortfolioCard
-              ImageHref="https://i.ibb.co/mCPjBsH/image-05.jpg"
+              ImageHref="https://images.pexels.com/photos/3109671/pexels-photo-3109671.jpeg?auto=compress&cs=tinysrgb&w=600"
               category="Commercial"
               title="Retail Storefront"
               button="View Details"
@@ -167,7 +167,7 @@ const PortfolioCard = ({
       >
         <div className="relative mb-12">
           <div className="overflow-hidden rounded-[10px]">
-            <img src={ImageHref} alt="portfolio" className="w-full" />
+            <img src={ImageHref} alt="portfolio" className="w-full h-[30rem] object-cover" />
           </div>
           <div className="relative mx-7 -mt-20 rounded-lg bg-white py-[34px] px-3 text-center shadow-portfolio shadow-lg">
             <span className="text-red-500 mb-2 block text-sm font-medium">

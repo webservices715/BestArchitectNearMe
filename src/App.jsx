@@ -6,7 +6,8 @@ import Home from "./Pages/Home";
 import LoadingScreen from "./components/Loading";
 import Footer from "./components/Footer";
 import Contact from "./Pages/Contact";
-
+import BlogPage from "./components/BlogPage";
+import Blog from "./Pages/Blog";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -29,6 +30,8 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/blog/:id" element={<BlogPage />} />
+            <Route path="/blogs" element={<Blog />} />
           </Routes>
           <Footer />
         </>
