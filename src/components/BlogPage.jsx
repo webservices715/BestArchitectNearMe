@@ -3,8 +3,35 @@ import { useParams } from "react-router-dom";
 import blogsData from "../data/blogs.json";
 import BlogSection from "../components/BlogSection";
 import Subscribe from "./Subscribe";
+import { FaArrowUp } from 'react-icons/fa';
 
 const BlogPage = () => {
+
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const toggleVisibility = () => {
+      if (window.pageYOffset > 300) {
+        setIsVisible(true);
+      } else {
+        setIsVisible(false);
+      }
+    };
+
+    window.addEventListener('scroll', toggleVisibility);
+
+    return () => {
+      window.removeEventListener('scroll', toggleVisibility);
+    };
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
+
   const { id } = useParams();
   const [blog, setBlog] = useState(null);
 
@@ -86,7 +113,17 @@ const BlogPage = () => {
       <Subscribe />
 
       {/* Scroll Top Button */}
-
+ <div className="fixed bottom-4 right-4">
+      {isVisible && (
+        <button
+          onClick={scrollToTop}
+          className="btn-toggle-round scroll-top js-scroll-top p-3 bg-red-600 text-white rounded-full shadow-lg hover:bg-red-700 focus:outline-none"
+          title="Scroll to top"
+        >
+          <FaArrowUp className="w-6 h-6" />
+        </button>
+      )}
+    </div>
       
       <BlogSection />
 
