@@ -3,23 +3,31 @@ import ArchitectCard from '../components/ArchitectCard';
 
 const architects = [
   {
-    image: 'https://via.placeholder.com/400x300',
-    name: 'John Doe',
-    title: 'Chief Architect',
-    description: 'John has over 20 years of experience in the field of architecture.',
+    image: "https://via.placeholder.com/400x300",
+    name: "John Doe",
+    title: "Lead Architect",
+    description: "John is a visionary architect with over 20 years of experience in sustainable design.",
+    rating: 4,
+    address: "123 Main St, Springfield, IL",
+    phone: "(123) 456-7890",
     social: [
-      { platform: 'LinkedIn', url: 'https://www.linkedin.com/in/johndoe' },
-      { platform: 'Twitter', url: 'https://twitter.com/johndoe' },
+      { platform: "Facebook", url: "https://facebook.com" },
+      { platform: "Twitter", url: "https://twitter.com" },
+      { platform: "LinkedIn", url: "https://linkedin.com" },
     ],
   },
   {
-    image: 'https://via.placeholder.com/400x300',
-    name: 'Jane Smith',
-    title: 'Senior Architect',
-    description: 'Jane specializes in sustainable architecture and design.',
+    image: "https://via.placeholder.com/400x300",
+    name: "John Doe",
+    title: "Lead Architect",
+    description: "John is a visionary architect with over 20 years of experience in sustainable design.",
+    rating: 4,
+    address: "123 Main St, Springfield, IL",
+    phone: "(123) 456-7890",
     social: [
-      { platform: 'LinkedIn', url: 'https://www.linkedin.com/in/janesmith' },
-      { platform: 'Instagram', url: 'https://instagram.com/janesmith' },
+      { platform: "Facebook", url: "https://facebook.com" },
+      { platform: "Twitter", url: "https://twitter.com" },
+      { platform: "LinkedIn", url: "https://linkedin.com" },
     ],
   },
 ];

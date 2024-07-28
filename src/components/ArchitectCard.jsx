@@ -1,11 +1,19 @@
 import React from 'react';
-import { FaFacebookF, FaTwitter, FaLinkedinIn } from 'react-icons/fa';
+import { FaFacebookF, FaTwitter, FaLinkedinIn, FaStar, FaRegStar, FaMapMarkerAlt, FaPhoneAlt, FaWhatsapp } from 'react-icons/fa';
 
-const ArchitectCard = ({ image, name, title, description, social }) => {
+const ArchitectCard = ({ image, name, title, description, rating, address, phone, social }) => {
   const socialIcons = {
     Facebook: <FaFacebookF />,
     Twitter: <FaTwitter />,
     LinkedIn: <FaLinkedinIn />,
+  };
+
+  const renderRating = (rating) => {
+    const stars = [];
+    for (let i = 1; i <= 5; i++) {
+      stars.push(i <= rating ? <FaStar key={i} className="text-yellow-500" /> : <FaRegStar key={i} className="text-yellow-500" />);
+    }
+    return stars;
   };
 
   return (
@@ -19,7 +27,18 @@ const ArchitectCard = ({ image, name, title, description, social }) => {
         </div>
       </div>
       <div className="px-6 py-4">
+        <div className="flex items-center mb-2">
+          {renderRating(rating)}
+        </div>
         <p className="text-gray-700 text-base mt-2">{description}</p>
+        <div className="flex items-center text-gray-500 text-sm mt-2">
+          <FaMapMarkerAlt className="mr-2" />
+          {address}
+        </div>
+        <div className="flex items-center text-gray-500 text-sm mt-2">
+          <FaPhoneAlt className="mr-2" />
+          {phone}
+        </div>
       </div>
       <div className="px-6 pt-4 pb-2 flex flex-wrap">
         {social.map((link, index) => (
@@ -34,6 +53,12 @@ const ArchitectCard = ({ image, name, title, description, social }) => {
             <span className="ml-2">{link.platform}</span>
           </a>
         ))}
+      </div>
+      <div className="px-6 py-4 flex justify-center">
+        <button className="bg-green-500 text-white rounded-full px-4 py-2 text-sm font-semibold hover:bg-green-600 transition-colors duration-300 flex items-center">
+          <FaWhatsapp className="mr-2" />
+          Chat Now
+        </button>
       </div>
     </div>
   );
