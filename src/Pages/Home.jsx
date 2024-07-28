@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-
 import BlogSection from "../components/BlogSection";
 import Hero from "../components/Hero";
 import OurProfessional from "../components/OurProfessional";

@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { NavLink, useLocation } from "react-router-dom";
-import MainLogo from "../assets/MainLogo.png";
 import mobilenav from "../assets/mobilenav.png";
 import { IoIosLogIn } from "react-icons/io";
 import { AiOutlineAlignRight } from "react-icons/ai";
@@ -46,7 +45,7 @@ function Navbar() {
         className={`font-Josefin font-semibold fixed w-full z-10 text-white transition-all duration-300 ease-in-out ${
           showNavbar
             ? scrollPos > 0
-              ? `bg-[#1f212b]  opacity-95 shadow-lg  `
+              ? `bg-[#fcfcfc]  opacity-95 shadow-lg `
               : "bg-transparent"
             : "hidden"
         }`}
@@ -67,7 +66,7 @@ function Navbar() {
               <NavLink
                 to="/"
                 className={`hover:text-zinc-250 ${
-                  isHomePage ? "text-white" : "text-black"
+                  isHomePage ? "text-black" : "text-black"
                 }`}
                 activeClassName="text-red-500"
               >
@@ -76,7 +75,7 @@ function Navbar() {
               <NavLink
                 to="/about"
                 className={`hover:text-zinc-250 ${
-                  isHomePage ? "text-white" : "text-black"
+                  isHomePage ? "text-black" : "text-black"
                 }`}
                 activeClassName="text-red-500"
               >
@@ -85,7 +84,7 @@ function Navbar() {
               <NavLink
                 to="/architects"
                 className={`hover:text-zinc-250 ${
-                  isHomePage ? "text-white" : "text-black"
+                  isHomePage ? "text-black" : "text-black"
                 }`}
                 activeClassName="text-red-500"
               >
@@ -94,7 +93,7 @@ function Navbar() {
               <NavLink
                 to="/blogs"
                 className={`hover:text-zinc-250 ${
-                  isHomePage ? "text-white" : "text-black"
+                  isHomePage ? "text-black" : "text-black"
                 }`}
                 activeClassName="text-red-500"
               >
@@ -103,7 +102,7 @@ function Navbar() {
               <NavLink
                 to="/hiring"
                 className={`hover:text-zinc-250 ${
-                  isHomePage ? "text-white" : "text-black"
+                  isHomePage ? "text-black" : "text-black"
                 }`}
                 activeClassName="text-red-500"
               >
@@ -112,7 +111,7 @@ function Navbar() {
               <NavLink
                 to="/contact"
                 className={`hover:text-zinc-250 ${
-                  isHomePage ? "text-white" : "text-black"
+                  isHomePage ? "text-black" : "text-black"
                 }`}
                 activeClassName="text-red-500"
               >
@@ -120,7 +119,7 @@ function Navbar() {
               </NavLink>
             </div>
             <button
-              className={`focus:outline-none hover:bg-red-500 hover:text-white transition-all duration-500 ease-in-out transform  ${ isHomePage ? "text-white" : "text-black"} hover:scale-105 rounded-full ml-5 px-2 py-2 `}
+              className={`focus:outline-none hover:bg-red-500 hover:text-white transition-all duration-500 ease-in-out transform  ${ isHomePage ? "text-black" : "text-black"} hover:scale-105 rounded-full ml-5 px-2 py-2 `}
               onClick={() => setSearchOpen(true)}
             >
               <CiSearch size={26} />
@@ -137,7 +136,7 @@ function Navbar() {
                 <FiX size={25} />
               ) : (
                 <AiOutlineAlignRight
-                  className={`rounded-full border-2  ${ isHomePage ? "border-white" : "border-black"}  p-2 hover:bg-red-500 transition-all duration-500 ease-in-out transform   ${ isHomePage ? "text-white" : "text-black hover:text-white"}  hover:scale-105`}
+                  className={`rounded-full border-2  ${ isHomePage ? "border-white" : "border-black"}  p-2 hover:bg-red-500 transition-all duration-500 ease-in-out transform   ${ isHomePage ? "text-black" : "text-black hover:text-black"}  hover:scale-105`}
                   size={50}
                 />
               )}
@@ -189,7 +188,6 @@ function Navbar() {
                 </NavLink>
               </li>
               <hr />
-              <hr />
               <li>
                 <NavLink
                   to="/architects"
@@ -211,6 +209,8 @@ function Navbar() {
                   BLOG
                 </NavLink>
               </li>
+              <hr />
+
               <li>
                 <NavLink
                   to="/hiring"
@@ -288,9 +288,9 @@ function Navbar() {
                 <input
                   type="text"
                   placeholder="Search..."
-                  className="w-full max-w-2xl px-4 py-6 rounded-l-lg border-none outline-none text-black"
+                  className="w-full max-w-2xl px-4 py-6 rounded-l-lg border-none outline-none text-white"
                 />
-                <button className="bg-red-500 text-white px-8 py-[1.3rem] rounded-r-lg flex items-center ">
+                <button className="bg-red-500 text-white px-8 py-[1.37rem] rounded-r-lg flex items-center">
                   <CiSearch size={30} />
                 </button>
               </div>
