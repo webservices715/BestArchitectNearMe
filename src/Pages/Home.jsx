@@ -4,6 +4,7 @@ import BlogSection from "../components/BlogSection";
 import Hero from "../components/Hero";
 import OurProfessional from "../components/OurProfessional";
 import RecentProject from "../components/RecentProject";
+import Testimonils from "../components/Testimonils";
 
 function Home() {
   useEffect(() => {
@@ -16,6 +17,8 @@ function Home() {
       <RecentProject />
       
       <BlogSection />
+
+      <Testimonils />
     </div>
   );
 }

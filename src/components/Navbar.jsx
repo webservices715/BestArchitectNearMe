@@ -83,13 +83,13 @@ function Navbar() {
                 About
               </NavLink>
               <NavLink
-                to="/projects"
+                to="/architects"
                 className={`hover:text-zinc-250 ${
                   isHomePage ? "text-white" : "text-black"
                 }`}
                 activeClassName="text-red-500"
               >
-                Projects
+                Architects
               </NavLink>
               <NavLink
                 to="/blogs"
@@ -180,25 +180,15 @@ function Navbar() {
                 </NavLink>
               </li>
               <hr />
-              <li>
-                <NavLink
-                  to="/services"
-                  className="block py-1"
-                  activeClassName="text-red-500"
-                  onClick={() => setIsOpen(false)}
-                >
-                  SERVICES
-                </NavLink>
-              </li>
               <hr />
               <li>
                 <NavLink
-                  to="/projects"
+                  to="/architects"
                   className="block py-1"
                   activeClassName="text-red-500"
                   onClick={() => setIsOpen(false)}
                 >
-                  PROJECTS
+                  Architects
                 </NavLink>
               </li>
               <hr />
