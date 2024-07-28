@@ -32,7 +32,7 @@ const Testimonils = () => {
   };
 
   return (
-    <section className="py-24">
+    <section className="py-24 font-barlow">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex justify-center items-center gap-y-8 lg:gap-y-0 flex-wrap md:flex-wrap lg:flex-nowrap lg:flex-row lg:justify-between lg:gap-x-8 max-w-sm sm:max-w-2xl lg:max-w-full mx-auto">
           <div className="w-full lg:w-2/5">
@@ -68,7 +68,7 @@ const Testimonils = () => {
                   }`}
                   style={{ transform: `translateX(${(index - currentIndex) * 100}%)` }}
                 >
-                  <div className="bg-white border border-solid border-gray-300 rounded-2xl max-sm:max-w-sm max-sm:mx-auto p-6">
+                  <div className="bg-white border border-solid border-gray-300 rounded-2xl mx-2 max-sm:max-w-sm max-sm:mx-auto p-5">
                     <div className="flex items-center gap-5 mb-5 sm:mb-9">
                       <img className="rounded-full" src={testimonial.image} alt="avatar" />
                       <div className="grid gap-1">

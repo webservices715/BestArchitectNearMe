@@ -101,6 +101,15 @@ function Navbar() {
                 Blog
               </NavLink>
               <NavLink
+                to="/hiring"
+                className={`hover:text-zinc-250 ${
+                  isHomePage ? "text-white" : "text-black"
+                }`}
+                activeClassName="text-red-500"
+              >
+                Hiring
+              </NavLink>
+              <NavLink
                 to="/contact"
                 className={`hover:text-zinc-250 ${
                   isHomePage ? "text-white" : "text-black"
@@ -200,6 +209,16 @@ function Navbar() {
                   onClick={() => setIsOpen(false)}
                 >
                   BLOG
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/hiring"
+                  className="block py-1"
+                  activeClassName="text-red-500"
+                  onClick={() => setIsOpen(false)}
+                >
+                  Hiring
                 </NavLink>
               </li>
               <hr />

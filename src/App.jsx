@@ -9,6 +9,7 @@ import Contact from "./Pages/Contact";
 import BlogPage from "./components/BlogPage";
 import Blog from "./Pages/Blog";
 import Architects from "./Pages/Architects";
+import Hiring from "./Pages/Hiring";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -34,6 +35,7 @@ function App() {
             <Route path="/blog/:id" element={<BlogPage />} />
             <Route path="/blogs" element={<Blog />} />
             <Route path="/architects" element={<Architects />} />
+            <Route path="/hiring" element={<Hiring />} />
           </Routes>
           <Footer />
         </>
