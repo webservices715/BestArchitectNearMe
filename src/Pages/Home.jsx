@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import ArchitectsList from "../components/ArchitectsList";
 import BlogSection from "../components/BlogSection";
 import Hero from "../components/Hero";
 import OurProfessional from "../components/OurProfessional";
@@ -12,7 +13,11 @@ function Home() {
   return (
     <div>
       <Hero />
+      
       <OurProfessional />
+
+      <ArchitectsList />
+
       <RecentProject />
       
       <BlogSection />

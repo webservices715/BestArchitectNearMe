@@ -11,7 +11,7 @@ function Hero() {
       <div
         className="hero-section h-screen sm:h-[120vh] font-sans bg-cover bg-no-repeat"
         style={{ backgroundImage: `url(${heroBg})` , backgroundBlendMode: 'overlay',  
-          backgroundColor: 'rgba(0, 0, 0, 0.5)'}}
+          backgroundColor: 'rgba(0, 0, 0, 0.3)'}}
       >
         <div className="info-section h-full flex flex-col justify-center px-6 sm:px-12 lg:px-24 xl:px-40">
           <div className="w-fit h-[70vh] flex flex-col justify-center ml-4 sm:ml-10 md:ml-20 font-sans absolute top-[12vh] sm:top-[20vh] lg:top-[20vh]">

@@ -17,6 +17,20 @@ const testimonials = [
     feedback: 'The features offered by pagedone have greatly improved my productivity and workflow.',
     stars: 5,
   },
+  {
+    name: 'Harsh P.',
+    role: 'Product Designer',
+    image: 'https://pagedone.io/asset/uploads/1696229994.png',
+    feedback: 'The features offered by pagedone have greatly improved my productivity and workflow.',
+    stars: 5,
+  },
+  {
+    name: 'Jane D',
+    role: 'CEO',
+    image: 'https://pagedone.io/asset/uploads/1696229969.png',
+    feedback: 'The user interface of this pagedone is so intuitive, I was able to start using it without any guidance.',
+    stars: 5,
+  },
   // Add more testimonials as needed
 ];
 
@@ -68,7 +82,7 @@ const Testimonils = () => {
                   }`}
                   style={{ transform: `translateX(${(index - currentIndex) * 100}%)` }}
                 >
-                  <div className="bg-white border border-solid border-gray-300 rounded-2xl mx-2 max-sm:max-w-sm max-sm:mx-auto p-5">
+                  <div className="bg-white border border-solid border-gray-300 rounded-2xl shadow-xl mx-2 max-sm:max-w-sm max-sm:mx-auto p-5">
                     <div className="flex items-center gap-5 mb-5 sm:mb-9">
                       <img className="rounded-full" src={testimonial.image} alt="avatar" />
                       <div className="grid gap-1">
