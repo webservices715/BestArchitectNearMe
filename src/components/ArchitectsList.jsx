@@ -257,7 +257,7 @@ const ArchitectProfiles = () => {
             </form>
           </div>
 
-          <section className="py-10 bg-white mt-2 shadow-lg rounded-xl">
+          <section className="py-10 bg-white mt-2 shadow-lg rounded-xl hidden lg:block">
             <div className="mx-auto  px-4 sm:px-6 lg:px-8 font-barlow">
               <h2 className="text-2xl font-bold text-gray-900 text-center mb-2">
                 Check the latest blog
