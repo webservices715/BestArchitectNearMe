@@ -6,8 +6,7 @@ const Hiring = () => {
   return (
     <div
     className="w-full h-screen"
-    style={{ backgroundImage: `url(${commingsoon})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
-  >
+    style={{ backgroundImage: `url(${commingsoon})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
       <div className="w-full h-screen flex flex-col items-center justify-between  py-8">
         <div className="flex-1 flex flex-col items-center justify-center">
          
