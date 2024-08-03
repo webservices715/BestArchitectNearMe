@@ -108,6 +108,7 @@ const OverView = () => {
               </div>
             </div>
 
+<hr />
             {/* Contact Information Section */}
             <div className="mb-8">
               <h3 className="text-3xl font-semibold text-gray-800 mb-4 ">Contact Information</h3>
@@ -126,6 +127,8 @@ const OverView = () => {
                 </div>
               </div>
             </div>
+
+            <hr />  
 
             {/* Document Verification Section */}
             <div className="mb-8">
