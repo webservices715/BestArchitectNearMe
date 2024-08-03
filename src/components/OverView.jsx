@@ -14,24 +14,24 @@ const OverView = () => {
 
   return (
     <div className="w-full max-w-screen-xl mx-auto p-6">
-      <div className="bg-white p-6 rounded-lg border border-gray-300 shadow-lg">
+      <div className="bg-white p-6 rounded-lg border border-gray-300">
         {/* Overview Section */}
-        <div className="mb-8 text-center">
+        <div className="mb-8 ">
           <h2 className="text-4xl font-bold text-gray-900 mb-2">Overview</h2>
           <p className="text-gray-700 text-xl">Sulekha Score: <span className="font-bold text-teal-600 text-2xl">7.1</span></p>
         </div>
         
         {/* Services Offered Section */}
         <div className="mb-8">
-          <h3 className="text-3xl font-semibold text-gray-800 mb-4 text-center">Services Offered</h3>
-          <div className="flex flex-wrap gap-3 justify-center mb-4">
+          <h3 className="text-3xl font-semibold text-gray-800 mb-4 ">Services Offered</h3>
+          <div className="flex flex-wrap gap-3  mb-4">
             {services.slice(0, showMore ? services.length : 8).map((service, index) => (
               <span key={index} className="bg-teal-100 text-teal-800 text-sm font-medium px-4 py-2 rounded-full border border-teal-300">
                 {service}
               </span>
             ))}
           </div>
-          <div className="text-center">
+          <div className="">
             <button
               onClick={() => setShowMore(!showMore)}
               className="text-teal-600 font-medium hover:underline"
@@ -42,12 +42,12 @@ const OverView = () => {
         </div>
 
         {/* Payment and City Section */}
-        <div className="mb-8 grid grid-cols-1 md:grid-cols-2 gap-6 text-center">
-          <div className="flex items-center justify-center text-gray-700 text-lg">
+        <div className="mb-8 grid grid-cols-1 md:grid-cols-2 gap-6 ">
+          <div className="flex items-center  text-gray-700 text-lg">
             <MdAttachMoney className="text-teal-600 text-2xl mr-3" />
             <span>Accepted Payment Modes: Cash, Cheque</span>
           </div>
-          <div className="flex items-center justify-center text-gray-700 text-lg">
+          <div className="flex items-center  text-gray-700 text-lg">
             <MdLocationOn className="text-teal-600 text-2xl mr-3" />
             <span>Serving Cities: Bhopal</span>
           </div>
@@ -55,7 +55,7 @@ const OverView = () => {
 
         {/* Additional Information Section */}
         <div className="mb-8">
-          <h3 className="text-3xl font-semibold text-gray-800 mb-4 text-center">Additional Information</h3>
+          <h3 className="text-3xl font-semibold text-gray-800 mb-4 ">Additional Information</h3>
           <div className="space-y-6">
             <div className="flex items-center">
               <MdInfo className="text-teal-600 text-2xl mr-3" />
@@ -89,7 +89,7 @@ const OverView = () => {
             
             {/* Expertise Section */}
             <div className="mb-8">
-              <h3 className="text-3xl font-semibold text-gray-800 mb-4 text-center">Expertise</h3>
+              <h3 className="text-3xl font-semibold text-gray-800 mb-4 ">Expertise</h3>
               <div className="space-y-4">
                 <div className="flex items-center">
                   <MdPerson className="text-teal-600 text-2xl mr-3" />
@@ -110,7 +110,7 @@ const OverView = () => {
 
             {/* Contact Information Section */}
             <div className="mb-8">
-              <h3 className="text-3xl font-semibold text-gray-800 mb-4 text-center">Contact Information</h3>
+              <h3 className="text-3xl font-semibold text-gray-800 mb-4 ">Contact Information</h3>
               <div className="space-y-4">
                 <div className="flex items-center">
                   <MdPerson className="text-teal-600 text-2xl mr-3" />
@@ -129,7 +129,7 @@ const OverView = () => {
 
             {/* Document Verification Section */}
             <div className="mb-8">
-              <h3 className="text-3xl font-semibold text-gray-800 mb-4 text-center">Document Verification</h3>
+              <h3 className="text-3xl font-semibold text-gray-800 mb-4 ">Document Verification</h3>
               <div className="space-y-4">
                 <div className="flex items-center">
                   <MdCheckCircle className="text-teal-600 text-2xl mr-3" />

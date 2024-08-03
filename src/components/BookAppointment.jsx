@@ -24,7 +24,7 @@ const BookAppointment = () => {
         </div>
       )}
 
-      <div className="max-w-sm mt-3 mx-auto bg-white shadow-lg rounded-lg overflow-hidden md:max-w-md lg:w-full p-6">
+      <div className="max-w-sm mt-3  bg-white shadow-lg rounded-lg overflow-hidden md:max-w-md lg:w-full p-6">
         <div className="text-center">
           <h2 className="text-2xl font-bold text-gray-800 mb-2">Book Your Appointment</h2>
           <p className="text-gray-600 mb-6">Easily schedule a meeting with us</p>
