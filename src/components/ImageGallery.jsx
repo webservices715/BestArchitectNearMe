@@ -28,7 +28,7 @@ const ImageGallery = () => {
   const extraSmallImages = images.slice(5); // Remaining images
 
   return (
-    <div className="container mx-auto px-5">
+    <div className="container mx-auto md:px-32 px-2">
       <div className="flex flex-wrap -m-2">
         {/* Large image on the left */}
         <div className="w-full md:w-1/2 p-2 relative">
