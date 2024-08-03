@@ -1,6 +1,7 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
 import ImageGallery from '../components/ImageGallery';
+import OverView from '../components/OverView';
 
 function ArchitectDetail() {
   const location = useLocation();
@@ -23,6 +24,7 @@ function ArchitectDetail() {
     <div className="flex flex-col py-28 px-4">
       {/* Gallery */}
       <ImageGallery />
+      <OverView/>
 
   </div>
   );
