@@ -2,11 +2,11 @@ import React, { useState, useEffect } from 'react';
 import { MdArrowBack, MdArrowForward } from 'react-icons/md';
 
 const images = [
-  "https://flowbite.s3.amazonaws.com/docs/gallery/square/image-1.jpg",
-  "https://flowbite.s3.amazonaws.com/docs/gallery/square/image-2.jpg",
-  "https://flowbite.s3.amazonaws.com/docs/gallery/square/image-3.jpg",
-  "https://flowbite.s3.amazonaws.com/docs/gallery/square/image-4.jpg",
-  "https://flowbite.s3.amazonaws.com/docs/gallery/square/image-5.jpg",
+  "https://images.pexels.com/photos/302769/pexels-photo-302769.jpeg?auto=compress&cs=tinysrgb&w=600",
+  "https://images.pexels.com/photos/323705/pexels-photo-323705.jpeg?auto=compress&cs=tinysrgb&w=600",
+  "https://images.pexels.com/photos/65438/pexels-photo-65438.jpeg?auto=compress&cs=tinysrgb&w=600",
+  "https://images.pexels.com/photos/269077/pexels-photo-269077.jpeg?auto=compress&cs=tinysrgb&w=600",
+  "https://images.pexels.com/photos/269077/pexels-photo-269077.jpeg?auto=compress&cs=tinysrgb&w=600",
 ];
 
 const ImageGallery = () => {

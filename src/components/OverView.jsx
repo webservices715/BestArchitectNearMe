@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { MdAttachMoney, MdLocationOn, MdInfo, MdPerson, MdPhone, MdCheckCircle, MdClose } from 'react-icons/md';
 import { FaCheckCircle, FaTimesCircle } from 'react-icons/fa';
+import BookAppointment from './BookAppointment';
 
 const OverView = () => {
   const [showMore, setShowMore] = useState(false);
@@ -114,6 +115,9 @@ const OverView = () => {
           </div>
         </div>
       </div>
+      
+      <BookAppointment />
+
     </div>
   );
 };

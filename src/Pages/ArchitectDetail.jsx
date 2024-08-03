@@ -1,5 +1,6 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
+import BookAppointment from '../components/BookAppointment';
 import ImageGallery from '../components/ImageGallery';
 import OverView from '../components/OverView';
 
