@@ -14,7 +14,7 @@ const OverView = () => {
 
   return (
     <div className="w-full max-w-screen-xl mx-auto p-6">
-      <div className="bg-white p-6 rounded-lg border border-gray-300 ">
+      <div className="bg-white p-6 rounded-lg border border-gray-300 shadow-lg">
         {/* Overview Section */}
         <div className="mb-8 text-center">
           <h2 className="text-4xl font-bold text-gray-900 mb-2">Overview</h2>
@@ -85,33 +85,65 @@ const OverView = () => {
               <MdCheckCircle className="text-teal-600 text-2xl mr-3" />
               <span className="text-gray-700"><strong>Loan Assistance Provided:</strong> Yes</span>
             </div>
-            <div className="flex items-center">
-              <MdPerson className="text-teal-600 text-2xl mr-3" />
-              <span className="text-gray-700"><strong>Expertise:</strong> Duplex House, Apartment, 3 BHK Flat Interior Design, 1 BHK Flat Interior Design, Villa, Bungalow, False Ceiling, Entertainment Units, Crockery Units, Pooja Room, Kids Room, Study Room, Dining Room, Wardrobe, 3D Interior Design, Space Planning, Bedroom, Kitchen, Living Room, Bathroom</span>
+            <hr className="my-6 border-gray-300" />
+            
+            {/* Expertise Section */}
+            <div className="mb-8">
+              <h3 className="text-3xl font-semibold text-gray-800 mb-4 text-center">Expertise</h3>
+              <div className="space-y-4">
+                <div className="flex items-center">
+                  <MdPerson className="text-teal-600 text-2xl mr-3" />
+                  <span className="text-gray-700">
+                    Duplex House, Apartment, 3 BHK Flat Interior Design, 1 BHK Flat Interior Design, Villa, Bungalow, False Ceiling, Entertainment Units, Crockery Units, Pooja Room, Kids Room, Study Room, Dining Room, Wardrobe, 3D Interior Design, Space Planning, Bedroom, Kitchen, Living Room, Bathroom
+                  </span>
+                </div>
+                <div className="flex items-center">
+                  <FaCheckCircle className="text-teal-600 text-2xl mr-3" />
+                  <span className="text-gray-700"><strong>Commercial Projects Executed:</strong> More than 50</span>
+                </div>
+                <div className="flex items-center">
+                  <MdInfo className="text-teal-600 text-2xl mr-3" />
+                  <span className="text-gray-700"><strong>Architecture Type:</strong> Hospital Design Architects, Industrial Architect, Structural Design Architects, 2D&3D Elevation Drawing Architects, Commercial Architects, Retail Store Design Architects, Green/Sustainable Design Architects, Home Architects</span>
+                </div>
+              </div>
             </div>
-            <div className="flex items-center">
-              <FaCheckCircle className="text-teal-600 text-2xl mr-3" />
-              <span className="text-gray-700"><strong>Commercial Projects Executed:</strong> More than 50</span>
+
+            {/* Contact Information Section */}
+            <div className="mb-8">
+              <h3 className="text-3xl font-semibold text-gray-800 mb-4 text-center">Contact Information</h3>
+              <div className="space-y-4">
+                <div className="flex items-center">
+                  <MdPerson className="text-teal-600 text-2xl mr-3" />
+                  <span className="text-gray-700"><strong>Contact Person:</strong> Richa Nitnaware</span>
+                </div>
+                <div className="flex items-center">
+                  <MdLocationOn className="text-teal-600 text-2xl mr-3" />
+                  <span className="text-gray-700"><strong>Address:</strong> Plot 1, M.P. Nagar, Bhopal - 462011</span>
+                </div>
+                <div className="flex items-center">
+                  <MdPhone className="text-teal-600 text-2xl mr-3" />
+                  <span className="text-gray-700"><strong>Contact Number:</strong> 08069873804</span>
+                </div>
+              </div>
             </div>
-            <div className="flex items-center">
-              <MdInfo className="text-teal-600 text-2xl mr-3" />
-              <span className="text-gray-700"><strong>Architecture Type:</strong> Hospital Design Architects, Industrial Architect, Structural Design Architects, 2D&3D Elevation Drawing Architects, Commercial Architects, Retail Store Design Architects, Green/Sustainable Design Architects, Home Architects</span>
-            </div>
-            <div className="flex items-center">
-              <MdPerson className="text-teal-600 text-2xl mr-3" />
-              <span className="text-gray-700"><strong>Contact Person:</strong> Richa Nitnaware</span>
-            </div>
-            <div className="flex items-center">
-              <MdLocationOn className="text-teal-600 text-2xl mr-3" />
-              <span className="text-gray-700"><strong>Address:</strong> Plot 1, M.P. Nagar, Bhopal - 462011</span>
-            </div>
-            <div className="flex items-center">
-              <MdPhone className="text-teal-600 text-2xl mr-3" />
-              <span className="text-gray-700"><strong>Contact Number:</strong> 08069873804</span>
-            </div>
-            <div className="flex items-center">
-              <MdCheckCircle className="text-teal-600 text-2xl mr-3" />
-              <span className="text-gray-700"><strong>Document Verification:</strong> Bank details: Verified, Business details: Verified, ID Proof: Verified</span>
+
+            {/* Document Verification Section */}
+            <div className="mb-8">
+              <h3 className="text-3xl font-semibold text-gray-800 mb-4 text-center">Document Verification</h3>
+              <div className="space-y-4">
+                <div className="flex items-center">
+                  <MdCheckCircle className="text-teal-600 text-2xl mr-3" />
+                  <span className="text-gray-700"><strong>Bank details:</strong> Verified</span>
+                </div>
+                <div className="flex items-center">
+                  <MdCheckCircle className="text-teal-600 text-2xl mr-3" />
+                  <span className="text-gray-700"><strong>Business details:</strong> Verified</span>
+                </div>
+                <div className="flex items-center">
+                  <MdCheckCircle className="text-teal-600 text-2xl mr-3" />
+                  <span className="text-gray-700"><strong>ID Proof:</strong> Verified</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
