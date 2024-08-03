@@ -72,11 +72,11 @@ const Architects = () => {
 
   return (
     <div className="container px-2 py-32">
-      <div className="mb-8 lg:p-12 p-4 bg-red-500 text-white -skew-y-1">
+      <div className="mb-8 lg:p-1 p-4 bg-red-500 text-white -skew-y-1">
         <div className="flex flex-col items-center py-8 text-center lg:py-12">
           <div className="w-full px-4 lg:w-[90%] lg:px-0">
             <div className="mb-8">
-              <h2 className="text-3xl lg:text-4xl font-bold mb-3">
+              <h2 className="text-2xl lg:text-3xl font-bold mb-3">
                 Looking for an Architect?
               </h2>
               <p className="text-lg lg:text-xl opacity-80">
@@ -89,26 +89,26 @@ const Architects = () => {
                 placeholder="Search by City"
                 value={searchQueryCity}
                 onChange={handleSearchChangeCity}
-                className="w-full rounded-md px-2 py-4 focus:outline-none text-black focus:ring-2 focus:ring-orange-600 focus:border-transparent"
+                className="w-full rounded-md px-2 py-3 focus:outline-none text-black focus:ring-2 focus:ring-orange-600 focus:border-transparent"
               />
               <input
                 type="text"
                 placeholder="Search by State"
                 value={searchQueryState}
                 onChange={handleSearchChangeState}
-                className="w-full rounded-md px-2 py-4 focus:outline-none text-black focus:ring-2 focus:ring-orange-600 focus:border-transparent"
+                className="w-full rounded-md px-2 py-3 focus:outline-none text-black focus:ring-2 focus:ring-orange-600 focus:border-transparent"
               />
               <input
                 type="text"
                 placeholder="Search by Country"
                 value={searchQueryCountry}
                 onChange={handleSearchChangeCountry}
-                className="w-full rounded-md px-2 py-4 focus:outline-none text-black focus:ring-2 focus:ring-orange-600 focus:border-transparent"
+                className="w-full rounded-md px-2 py-3 focus:outline-none text-black focus:ring-2 focus:ring-orange-600 focus:border-transparent"
               />
               <select
                 value={searchQuerySpecialty}
                 onChange={handleSearchChangeSpecialty}
-                className="w-full rounded-md px-2 py-4 focus:outline-none text-black focus:ring-2 focus:ring-orange-600 focus:border-transparent"
+                className="w-full rounded-md px-2 py-3 focus:outline-none text-black focus:ring-2 focus:ring-orange-600 focus:border-transparent"
               >
                 <option value="">Select Specialty</option>
                 <option value="Residential">Residential</option>
@@ -120,7 +120,7 @@ const Architects = () => {
               <select
                 value={searchQueryExperience}
                 onChange={handleSearchChangeExperience}
-                className="w-full rounded-md px-2 py-4 focus:outline-none text-black focus:ring-2 focus:ring-orange-600 focus:border-transparent"
+                className="w-full rounded-md px-2 py-3 focus:outline-none text-black focus:ring-2 focus:ring-orange-600 focus:border-transparent"
               >
                 <option value="">Select Experience</option>
                 <option value="5 years">5 years</option>
@@ -131,7 +131,7 @@ const Architects = () => {
               <select
                 value={searchQueryCertification}
                 onChange={handleSearchChangeCertification}
-                className="w-full rounded-md px-2 py-4 focus:outline-none text-black focus:ring-2 focus:ring-orange-600 focus:border-transparent"
+                className="w-full rounded-md px-2 py-3 focus:outline-none text-black focus:ring-2 focus:ring-orange-600 focus:border-transparent"
               >
                 <option value="">Select Certification</option>
                 <option value="LEED AP">LEED AP</option>
@@ -141,7 +141,7 @@ const Architects = () => {
               <select
                 value={searchQueryStyle}
                 onChange={handleSearchChangeStyle}
-                className="w-full rounded-md px-2 py-4 focus:outline-none text-black focus:ring-2 focus:ring-orange-600 focus:border-transparent"
+                className="w-full rounded-md px-2 py-3 focus:outline-none text-black focus:ring-2 focus:ring-orange-600 focus:border-transparent"
               >
                 <option value="">Select Style</option>
                 <option value="Modern">Modern</option>
