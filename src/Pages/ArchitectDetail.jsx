@@ -3,6 +3,7 @@ import { useLocation } from 'react-router-dom';
 import BookAppointment from '../components/BookAppointment';
 import ImageGallery from '../components/ImageGallery';
 import OverView from '../components/OverView';
+import ProfileInfo from '../components/ProfileInfo';
 
 function ArchitectDetail() {
   const location = useLocation();
@@ -25,6 +26,7 @@ function ArchitectDetail() {
     <div className="flex flex-col py-28 px-4">
       {/* Gallery */}
       <ImageGallery />
+      <ProfileInfo/>
       <OverView/>
 
   </div>
