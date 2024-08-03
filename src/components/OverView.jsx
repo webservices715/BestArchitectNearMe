@@ -13,8 +13,8 @@ const OverView = () => {
   ];
 
   return (
-    <div className="w-full max-w-screen-xl mx-auto p-6">
-      <div className="bg-white p-6 rounded-lg">
+    <div className="w-full max-w-screen-xl mx-auto p-3 md:p-0">
+      <div className="bg-white p-2 md:p-6 rounded-lg">
         {/* Overview Section */}
         <div className="mb-8 ">
           <h2 className="text-4xl font-bold text-gray-900 mb-2">Overview</h2>
@@ -26,7 +26,7 @@ const OverView = () => {
           <h3 className="text-3xl font-semibold text-gray-800 mb-4 ">Services Offered</h3>
           <div className="flex flex-wrap gap-3  mb-4">
             {services.slice(0, showMore ? services.length : 8).map((service, index) => (
-              <span key={index} className="bg-teal-100 text-teal-800 text-sm font-medium px-4 py-2 rounded-full border border-teal-300">
+              <span key={index} className="bg-orange-100 text-teal-800 text-sm font-medium px-4 py-2 rounded-full border border-orange-300">
                 {service}
               </span>
             ))}
@@ -34,7 +34,7 @@ const OverView = () => {
           <div className="">
             <button
               onClick={() => setShowMore(!showMore)}
-              className="text-teal-600 font-medium hover:underline"
+              className="text-orange-600 font-medium hover:underline"
             >
               {showMore ? '- Show Less' : '+ Show More'}
             </button>
