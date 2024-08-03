@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { FaStar } from 'react-icons/fa';
 
 const images = [
   {
@@ -57,8 +56,8 @@ const ImageGallery = () => {
               className="block w-full h-80 object-cover object-center transition-transform duration-300 hover:scale-105"
               src={largeImage.src}
             />
-            <div className="absolute top-2 left-2 bg-white rounded-full px-2 py-1 text-sm font-bold shadow-md flex items-center">
-              <FaStar className="text-yellow-500 mr-1" /> {largeImage.rating}
+            <div className="absolute top-2 left-2 bg-white rounded-full px-2 py-1 text-sm font-bold shadow-md">
+              ⭐ {largeImage.rating}
             </div>
             <div className="absolute bottom-2 left-2 text-white">
               <h2 className="text-lg font-bold">{largeImage.city}</h2>
@@ -68,7 +67,7 @@ const ImageGallery = () => {
         </div>
 
         {/* Grid of smaller images on the right */}
-        <div className={`w-full md:w-1/2 p-2 grid ${showAll ? 'grid-cols-2 gap-4' : 'grid-cols-2 gap-4 md:grid-cols-1 md:gap-2'}`}>
+        <div className="w-full md:w-1/2 p-2 grid grid-cols-2 gap-4">
           {initialSmallImages.map((image, index) => (
             <div key={index} className="relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
               <img
@@ -76,8 +75,8 @@ const ImageGallery = () => {
                 className="block w-full h-32 object-cover object-center transition-transform duration-300 hover:scale-105"
                 src={image.src}
               />
-              <div className="absolute top-2 left-2 bg-white rounded-full px-2 py-1 text-xs font-bold shadow-md flex items-center">
-                <FaStar className="text-yellow-500 mr-1" /> {image.rating}
+              <div className="absolute top-2 left-2 bg-white rounded-full px-2 py-1 text-xs font-bold shadow-md">
+                ⭐ {image.rating}
               </div>
               <div className="absolute bottom-2 left-2 text-white">
                 <h2 className="text-sm font-bold">{image.city}</h2>
@@ -94,8 +93,8 @@ const ImageGallery = () => {
                 className="block w-full h-32 object-cover object-center transition-transform duration-300 hover:scale-105"
                 src={image.src}
               />
-              <div className="absolute top-2 left-2 bg-white rounded-full px-2 py-1 text-xs font-bold shadow-md flex items-center">
-                <FaStar className="text-yellow-500 mr-1" /> {image.rating}
+              <div className="absolute top-2 left-2 bg-white rounded-full px-2 py-1 text-xs font-bold shadow-md">
+                ⭐ {image.rating}
               </div>
               <div className="absolute bottom-2 left-2 text-white">
                 <h2 className="text-sm font-bold">{image.city}</h2>
@@ -106,15 +105,26 @@ const ImageGallery = () => {
         </div>
       </div>
 
-      {/* Expandable section with button */}
-      <div className="relative mt-4 text-center">
-        <button
+      {/* Expandable section with arrow icon */}
+      <div className="relative mt-4">
+        <div
           onClick={() => setShowAll(!showAll)}
-          className="bg-black bg-opacity-50 text-white py-2 px-4 rounded-full transition-opacity duration-300 hover:bg-opacity-75 focus:outline-none"
+          className="absolute inset-0 bg-black bg-opacity-50 flex justify-center items-center text-white cursor-pointer transition-opacity duration-300"
+          style={{ opacity: showAll ? 0 : 1 }}
         >
-          {showAll ? 'Show Less' : 'Show More'}
-          
-        </button>
+          <svg
+            className="w-8 h-8 text-black"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <path d="M19 9l-7 7-7-7" />
+          </svg>
+        </div>
       </div>
     </div>
   );
