@@ -6,7 +6,7 @@ import { FaPhoneAlt } from "react-icons/fa";
 
 function Contactus() {
   return (
-    <section class="bg-white ">
+    <section class="bg-white">
       <div class="container px-6 md:px-14 py-12 mx-auto font-barlow">
         <div>
           <p class="font-medium text-red-500 ">Contact us</p>
@@ -22,8 +22,8 @@ function Contactus() {
         </div>
 
         <div class="grid grid-cols-1 gap-8 md:gap-2 mt-10 lg:grid-cols-2">
-          <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
-            <div>
+          <div class="grid grid-cols-1 gap-8  md:grid-cols-2 mx-auto md:mx-0">
+            <div className="bg-gray-50 shadow-xl h-52 rounded-lg px-6 w-60 py-4">
               <a href="mailto:hello@merakiui.com">
                 <span class="inline-block p-3 text-red-500 rounded-full bg-red-100/80 ">
                   <LuMailCheck size={30} />
@@ -37,7 +37,7 @@ function Contactus() {
               </a>
             </div>
 
-            <div>
+            <div className="bg-gray-50 shadow-xl  h-52 rounded-lg px-6 w-60 py-4">
               <a href="https://wa.me/15550000000">
                 <span class="inline-block p-3 text-red-500 rounded-full bg-red-100/80 ">
                   <MdOutlineChatBubbleOutline size={30} />
@@ -53,7 +53,7 @@ function Contactus() {
               </a>
             </div>
 
-            <div>
+            <div className="bg-gray-50 shadow-xl  h-52 rounded-lg px-6 w-60 py-4">
                 <span class="inline-block p-3 text-red-500 rounded-full bg-red-100/80 ">
                   <SlLocationPin size={30} />
                 </span>
@@ -69,7 +69,7 @@ function Contactus() {
                 </p>
             </div>
 
-            <div>
+            <div className="bg-gray-50 shadow-xl  h-52 rounded-lg px-6 w-60 py-4">
               <a href="tel:+15550000000">
                 <span class="inline-block p-3 text-red-500 rounded-full bg-red-100/80 ">
                   <FaPhoneAlt size={30} />

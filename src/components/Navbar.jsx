@@ -145,9 +145,9 @@ function Navbar() {
 
           {/* Phone number and WhatsApp icon for large screens */}
           <div className="hidden md:flex items-center space-x-6">
-            <button className="hidden sm:flex items-center gap-2 focus:outline-none bg-gradient-to-r from-[#ee4242] to-[#b30909] hover:text-black hover:bg-transparent  transition-all duration-500 ease-in-out transform hover:scale-105 text-white text-lg py-3 px-4  rounded-md ">
+            <NavLink to={"/contact"} className="hidden sm:flex items-center gap-2 focus:outline-none bg-gradient-to-r from-[#ee4242] to-[#b30909] hover:text-black hover:bg-transparent  transition-all duration-500 ease-in-out transform hover:scale-105 text-white text-lg py-3 px-4  rounded-md ">
               Enroll Now <IoIosLogIn size={25} />
-            </button>
+            </NavLink>
           </div>
         </div>
 

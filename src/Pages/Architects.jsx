@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import ArchitectCard from "../components/ArchitectCard";
 
 const architects = [
@@ -51,6 +51,10 @@ const architects = [
 ];
 
 const Architects = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const [searchQueryCountry, setSearchQueryCountry] = useState("");
   const [searchQueryState, setSearchQueryState] = useState("");
   const [searchQueryCity, setSearchQueryCity] = useState("");
