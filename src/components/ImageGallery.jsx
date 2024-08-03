@@ -1,63 +1,130 @@
-import React, { useState, useEffect } from 'react';
-import { MdArrowBack, MdArrowForward } from 'react-icons/md';
+import React, { useState } from 'react';
 
 const images = [
-  "https://images.pexels.com/photos/302769/pexels-photo-302769.jpeg?auto=compress&cs=tinysrgb&w=600",
-  "https://images.pexels.com/photos/323705/pexels-photo-323705.jpeg?auto=compress&cs=tinysrgb&w=600",
-  "https://images.pexels.com/photos/65438/pexels-photo-65438.jpeg?auto=compress&cs=tinysrgb&w=600",
-  "https://images.pexels.com/photos/269077/pexels-photo-269077.jpeg?auto=compress&cs=tinysrgb&w=600",
-  "https://images.pexels.com/photos/269077/pexels-photo-269077.jpeg?auto=compress&cs=tinysrgb&w=600",
+  {
+    src: "https://flowbite.s3.amazonaws.com/docs/gallery/featured/image.jpg",
+    city: "London",
+    landmark: "Big Ben",
+    rating: 4.5
+  },
+  {
+    src: "https://flowbite.s3.amazonaws.com/docs/gallery/square/image-1.jpg",
+    city: "Rome",
+    landmark: "Colosseum",
+    rating: 4.7
+  },
+  {
+    src: "https://flowbite.s3.amazonaws.com/docs/gallery/square/image-2.jpg",
+    city: "Pisa",
+    landmark: "Pisa Tower",
+    rating: 4.3
+  },
+  {
+    src: "https://flowbite.s3.amazonaws.com/docs/gallery/square/image-3.jpg",
+    city: "Paris",
+    landmark: "Eiffel Tower",
+    rating: 5.0
+  },
+  {
+    src: "https://flowbite.s3.amazonaws.com/docs/gallery/square/image-4.jpg",
+    city: "New York",
+    landmark: "Statue of Liberty",
+    rating: 4.8
+  },
+  {
+    src: "https://flowbite.s3.amazonaws.com/docs/gallery/square/image-5.jpg",
+    city: "Sydney",
+    landmark: "Sydney Opera House",
+    rating: 5.0
+  }
 ];
 
 const ImageGallery = () => {
-  const [activeIndex, setActiveIndex] = useState(0);
-
-  const nextSlide = () => {
-    setActiveIndex((prevIndex) => (prevIndex + 1) % images.length);
-  };
-
-  const prevSlide = () => {
-    setActiveIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
-  };
-
-  // Automatic slide change every 3 seconds
-  useEffect(() => {
-    const interval = setInterval(nextSlide, 3000);
-    return () => clearInterval(interval); // Clear interval on component unmount
-  }, []);
+  const [showAll, setShowAll] = useState(false);
+  const largeImage = images[0];
+  const initialSmallImages = images.slice(1, 4); // First 3 images
+  const extraSmallImages = images.slice(4); // Remaining images
 
   return (
-    <div id="custom-controls-gallery" className="relative w-full max-w-screen-lg mx-auto">
-      {/* Carousel wrapper */}
-      <div className="relative h-64 overflow-hidden rounded-lg md:h-[32rem]">
-        {images.map((src, index) => (
-          <div
-            key={index}
-            className={`absolute  inset-0 transition-opacity duration-700 ease-in-out ${index === activeIndex ? 'opacity-100' : 'opacity-0'}`}
-          >
-            <img src={src} alt={`Slide ${index + 1}`} className="w-full h-full object-cover" />
+    <div className="container mx-auto px-5 py-2 lg:px-32 lg:pt-24">
+      <div className="flex flex-wrap -m-2">
+        {/* Large image on the left */}
+        <div className="w-full md:w-1/2 p-2 relative">
+          <div className="relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <img
+              alt={`${largeImage.city} ${largeImage.landmark}`}
+              className="block w-full h-80 object-cover object-center transition-transform duration-300 hover:scale-105"
+              src={largeImage.src}
+            />
+            <div className="absolute top-2 left-2 bg-white rounded-full px-2 py-1 text-sm font-bold shadow-md">
+              ⭐ {largeImage.rating}
+            </div>
+            <div className="absolute bottom-2 left-2 text-white">
+              <h2 className="text-lg font-bold">{largeImage.city}</h2>
+              <p className="text-sm">{largeImage.landmark}</p>
+            </div>
           </div>
-        ))}
+        </div>
+
+        {/* Grid of smaller images on the right */}
+        <div className="w-full md:w-1/2 p-2 grid grid-cols-2 gap-4">
+          {initialSmallImages.map((image, index) => (
+            <div key={index} className="relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <img
+                alt={`${image.city} ${image.landmark}`}
+                className="block w-full h-32 object-cover object-center transition-transform duration-300 hover:scale-105"
+                src={image.src}
+              />
+              <div className="absolute top-2 left-2 bg-white rounded-full px-2 py-1 text-xs font-bold shadow-md">
+                ⭐ {image.rating}
+              </div>
+              <div className="absolute bottom-2 left-2 text-white">
+                <h2 className="text-sm font-bold">{image.city}</h2>
+                <p className="text-xs">{image.landmark}</p>
+              </div>
+            </div>
+          ))}
+
+          {/* Expandable panel for extra images */}
+          {showAll && extraSmallImages.map((image, index) => (
+            <div key={index} className="relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <img
+                alt={`${image.city} ${image.landmark}`}
+                className="block w-full h-32 object-cover object-center transition-transform duration-300 hover:scale-105"
+                src={image.src}
+              />
+              <div className="absolute top-2 left-2 bg-white rounded-full px-2 py-1 text-xs font-bold shadow-md">
+                ⭐ {image.rating}
+              </div>
+              <div className="absolute bottom-2 left-2 text-white">
+                <h2 className="text-sm font-bold">{image.city}</h2>
+                <p className="text-xs">{image.landmark}</p>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
-      <div className="absolute top-1/2 left-4 transform -translate-y-1/2 flex items-center">
-        <button
-          type="button"
-          className="flex justify-center items-center p-2 cursor-pointer group focus:outline-none bg-white rounded-full shadow-lg"
-          onClick={prevSlide}
+
+      {/* Expandable section with arrow icon */}
+      <div className="relative mt-4">
+        <div
+          onClick={() => setShowAll(!showAll)}
+          className="absolute inset-0 bg-black bg-opacity-50 flex justify-center items-center text-white cursor-pointer transition-opacity duration-300"
+          style={{ opacity: showAll ? 0 : 1 }}
         >
-          <MdArrowBack className="w-6 h-6 text-gray-600 hover:text-gray-900" />
-          <span className="sr-only">Previous</span>
-        </button>
-      </div>
-      <div className="absolute top-1/2 right-4 transform -translate-y-1/2 flex items-center">
-        <button
-          type="button"
-          className="flex justify-center items-center p-2 cursor-pointer group focus:outline-none bg-white rounded-full shadow-lg"
-          onClick={nextSlide}
-        >
-          <MdArrowForward className="w-6 h-6 text-gray-600 hover:text-gray-900" />
-          <span className="sr-only">Next</span>
-        </button>
+          <svg
+            className="w-8 h-8 text-black"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <path d="M19 9l-7 7-7-7" />
+          </svg>
+        </div>
       </div>
     </div>
   );
