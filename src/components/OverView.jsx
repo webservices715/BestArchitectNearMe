@@ -92,7 +92,7 @@ const OverView = () => {
               <h3 className="text-3xl font-semibold text-gray-800 mb-4 ">Expertise</h3>
               <div className="space-y-4">
                 <div className="flex items-center">
-                  <MdPerson className="text-teal-600 text-2xl mr-3" />
+                  <FaCheckCircle className="text-teal-600 mr-3" size={44}/>
                   <span className="text-gray-700">
                     Duplex House, Apartment, 3 BHK Flat Interior Design, 1 BHK Flat Interior Design, Villa, Bungalow, False Ceiling, Entertainment Units, Crockery Units, Pooja Room, Kids Room, Study Room, Dining Room, Wardrobe, 3D Interior Design, Space Planning, Bedroom, Kitchen, Living Room, Bathroom
                   </span>
@@ -102,7 +102,7 @@ const OverView = () => {
                   <span className="text-gray-700"><strong>Commercial Projects Executed:</strong> More than 50</span>
                 </div>
                 <div className="flex items-center">
-                  <MdInfo className="text-teal-600 text-2xl mr-3" />
+                  <MdInfo className="text-teal-600 mr-3" size={45} />
                   <span className="text-gray-700"><strong>Architecture Type:</strong> Hospital Design Architects, Industrial Architect, Structural Design Architects, 2D&3D Elevation Drawing Architects, Commercial Architects, Retail Store Design Architects, Green/Sustainable Design Architects, Home Architects</span>
                 </div>
               </div>
