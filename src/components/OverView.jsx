@@ -14,7 +14,7 @@ const OverView = () => {
 
   return (
     <div className="w-full max-w-screen-xl mx-auto p-6">
-      <div className="bg-white p-6 rounded-lg border border-gray-300">
+      <div className="bg-white p-6 rounded-lg">
         {/* Overview Section */}
         <div className="mb-8 ">
           <h2 className="text-4xl font-bold text-gray-900 mb-2">Overview</h2>
