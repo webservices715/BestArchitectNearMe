@@ -10,11 +10,11 @@ const BookAppointment = () => {
     <div className="relative">
       {/* Show the AppointmentForm directly */}
       {showForm && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 pt-20 overflow-y-auto">
-          <div className="w-full max-w-3xl relative top-12 bg-white rounded-lg  p-6 ">
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 pt-20 font-barlow overflow-y-auto">
+          <div className="w-full max-w-3xl relative top-40 md:top-28 bg-white rounded-lg  p-6">
             {/* Close Button */}
             <button
-              className="absolute top-3 right-3 text-gray-500 hover:text-gray-700"
+              className="absolute top-6 right-10 text-gray-500 hover:text-gray-700"
               onClick={() => setShowForm(false)}
             >
               <FaTimes size={24} />
