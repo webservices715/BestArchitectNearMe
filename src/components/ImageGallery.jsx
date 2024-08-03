@@ -72,7 +72,7 @@ const ImageGallery = () => {
             <div key={index} className="relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
               <img
                 alt={`${image.city} ${image.landmark}`}
-                className="block w-full h-32 object-cover object-center transition-transform duration-300 hover:scale-105"
+                className="block w-full h-40 object-cover object-center transition-transform duration-300 hover:scale-105"
                 src={image.src}
               />
               <div className="absolute top-2 left-2 bg-white rounded-full px-2 py-1 text-xs font-bold shadow-md">
@@ -90,7 +90,7 @@ const ImageGallery = () => {
             <div key={index} className="relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
               <img
                 alt={`${image.city} ${image.landmark}`}
-                className="block w-full h-32 object-cover object-center transition-transform duration-300 hover:scale-105"
+                className="block w-full h-40 object-cover object-center transition-transform duration-300 hover:scale-105"
                 src={image.src}
               />
               <div className="absolute top-2 left-2 bg-white rounded-full px-2 py-1 text-xs font-bold shadow-md">
