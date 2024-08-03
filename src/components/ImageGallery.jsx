@@ -113,6 +113,7 @@ const ImageGallery = () => {
           className="bg-black bg-opacity-50 text-white py-2 px-4 rounded-full transition-opacity duration-300 hover:bg-opacity-75 focus:outline-none"
         >
           {showAll ? 'Show Less' : 'Show More'}
+          
         </button>
       </div>
     </div>
