@@ -23,7 +23,7 @@ function ArchitectDetail() {
   });
 
   return (
-    <div className="flex flex-col py-28 px-4">
+    <div className="flex flex-col py-28 px-1">
       {/* Gallery */}
       <ImageGallery />
       <ProfileInfo/>

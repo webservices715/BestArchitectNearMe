@@ -24,14 +24,11 @@ const ProfileInfo = () => {
           <p className="text-gray-500">Based on 6 Reviews</p>
         </div>
       </div>
-      <div className="mt-4 flex space-x-2">
-        <button className="flex items-center px-4 py-2 border rounded-md hover:bg-gray-100">
-          <FaPen className="mr-2" /> Write Review
-        </button>
-        <button className="flex items-center px-4 py-2 border rounded-md hover:bg-gray-100">
+      <div className="mt-4 flex space-x-3">
+        <button className="flex items-center px-4 py-2 text-xl  border rounded-md hover:bg-gray-100">
           <FaShareAlt className="mr-2" /> Share
         </button>
-        <button className="flex items-center px-4 py-2 border rounded-md hover:bg-gray-100">
+        <button className="flex items-center px-4 py-2 text-xl  border rounded-md hover:bg-gray-100">
           <FaDirections className="mr-2" /> Directions
         </button>
       </div>
