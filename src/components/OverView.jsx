@@ -1,5 +1,7 @@
 // Overview.jsx
 import React, { useState } from 'react';
+import { MdAttachMoney, MdLocationOn, MdInfo, MdPerson, MdPhone, MdCheckCircle, MdClose } from 'react-icons/md';
+import { FaCheckCircle, FaTimesCircle } from 'react-icons/fa';
 
 const OverView = () => {
   const [showMore, setShowMore] = useState(false);
@@ -8,76 +10,107 @@ const OverView = () => {
     'Building Consultants & Contractors', 'Building Contractors', 'Interior Designers', 'Modular Kitchen',
     '3D Elevation Drawing Architects', 'Architects', 'Architect Valuers', 'Building Space Planning Consultants',
     'Elevation Architects', 'Interior Architects', 'Landscape Architects', 'Perspective View Designers',
-    'Additional Service 1', 'Additional Service 2', 'Additional Service 3', 'Additional Service 4', 
-    'Additional Service 5', 'Additional Service 6', 'Additional Service 7', 'Additional Service 8',
-    'Additional Service 9', 'Additional Service 10', 'Additional Service 11', 'Additional Service 12',
-    'Additional Service 13', 'Additional Service 14', 'Additional Service 15', 'Additional Service 16',
-    'Additional Service 17', 'Additional Service 18', 'Additional Service 19', 'Additional Service 20',
-    'Additional Service 21', 'Additional Service 22', 'Additional Service 23', 'Additional Service 24',
-    'Additional Service 25', 'Additional Service 26', 'Additional Service 27', 'Additional Service 28',
-    'Additional Service 29', 'Additional Service 30', 'Additional Service 31', 'Additional Service 32',
-    'Additional Service 33', 'Additional Service 34', 'Additional Service 35', 'Additional Service 36',
-    'Additional Service 37', 'Additional Service 38', 'Additional Service 39', 'Additional Service 40',
-    'Additional Service 41', 'Additional Service 42', 'Additional Service 43', 'Additional Service 44',
-    'Additional Service 45', 'Additional Service 46', 'Additional Service 47', 'Additional Service 48',
-    'Additional Service 49', 'Additional Service 50', 'Additional Service 51', 'Additional Service 52',
-    'Additional Service 53'
   ];
 
   return (
     <div className="w-full max-w-screen-lg mx-auto p-6">
-      <div className="bg-white p-8 rounded-lg border border-gray-300 shadow-xl">
+      <div className="bg-white p-6 rounded-lg border border-gray-300 shadow-lg">
+        {/* Overview Section */}
         <div className="mb-8">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Overview</h2>
-          <p className="text-gray-700 text-lg">Sulekha Score: <span className="font-bold text-teal-600 text-xl">7.1</span></p>
+          <h2 className="text-3xl font-bold text-gray-900 mb-2">Overview</h2>
+          <p className="text-gray-700 text-xl">Sulekha Score: <span className="font-bold text-teal-600 text-2xl">7.1</span></p>
         </div>
         
+        {/* Services Offered Section */}
         <div className="mb-8">
           <h3 className="text-2xl font-semibold text-gray-800 mb-4">Services Offered</h3>
-          <div className="flex flex-wrap gap-3">
-            {services.slice(0, showMore ? services.length : 12).map((service, index) => (
-              <span key={index} className="bg-gray-200 text-gray-800 text-sm font-medium px-4 py-2 rounded-full border border-gray-300 hover:bg-gray-300 transition-colors duration-300">
+          <div className="flex flex-wrap gap-3 mb-4">
+            {services.slice(0, showMore ? services.length : 8).map((service, index) => (
+              <span key={index} className="bg-gray-200 text-gray-800 text-sm font-medium px-4 py-2 rounded-full border border-gray-300">
                 {service}
               </span>
             ))}
-            <span 
-              onClick={() => setShowMore(!showMore)}
-              className="text-teal-600 cursor-pointer font-medium hover:underline"
-            >
-              {showMore ? '- Show Less' : '+53 more'}
-            </span>
           </div>
+          <button
+            onClick={() => setShowMore(!showMore)}
+            className="text-teal-600 font-medium hover:underline"
+          >
+            {showMore ? '- Show Less' : '+ Show More'}
+          </button>
         </div>
-        
-        <div className="mb-8">
-          <h3 className="text-2xl font-semibold text-gray-800 mb-4">Serving Cities</h3>
-          <p className="text-gray-700 text-lg">Bhopal</p>
-        </div>
-        
-        <div className="mb-8">
-          <h3 className="text-2xl font-semibold text-gray-800 mb-4">Company Details</h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            <div className="p-6 bg-gray-50 rounded-lg border border-gray-200 shadow-md transition-transform transform hover:scale-105">
-              <p className="text-gray-700"><span className="font-bold text-gray-900">Experience:</span> 10 Years</p>
-            </div>
-            <div className="p-6 bg-gray-50 rounded-lg border border-gray-200 shadow-md transition-transform transform hover:scale-105">
-              <p className="text-gray-700"><span className="font-bold text-gray-900">Sulekha Score:</span> 7.1</p>
-            </div>
-            <div className="p-6 bg-gray-50 rounded-lg border border-gray-200 shadow-md transition-transform transform hover:scale-105">
-              <p className="text-gray-700"><span className="font-bold text-gray-900">No of Employees:</span> 10</p>
-            </div>
-            <div className="p-6 bg-gray-50 rounded-lg border border-gray-200 shadow-md transition-transform transform hover:scale-105">
-              <p className="text-gray-700"><span className="font-bold text-gray-900">Company Type:</span> Partnership Firm</p>
-            </div>
+
+        {/* Payment and City Section */}
+        <div className="mb-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="flex items-center text-gray-700 text-lg">
+            <MdAttachMoney className="text-teal-600 text-2xl mr-3" />
+            <span>Accepted Payment Modes: Cash, Cheque</span>
+          </div>
+          <div className="flex items-center text-gray-700 text-lg">
+            <MdLocationOn className="text-teal-600 text-2xl mr-3" />
+            <span>Serving Cities: Bhopal</span>
           </div>
         </div>
 
-        <div>
-          <h3 className="text-2xl font-semibold text-gray-800 mb-4">More Information</h3>
+        {/* Additional Information Section */}
+        <div className="mb-8">
+          <h3 className="text-2xl font-semibold text-gray-800 mb-4">Additional Information</h3>
           <div className="space-y-4">
-            <p className="text-gray-700"><span className="font-bold text-gray-900">Contact Person:</span> Ravi Talreja</p>
-            <p className="text-gray-700"><span className="font-bold text-gray-900">Contact Number:</span> 08069875236</p>
-            <p className="text-gray-700"><span className="font-bold text-gray-900">Address:</span> 48, basement, Plot No, E-3, Arera Colony, Bhopal - 462016</p>
+            <div className="flex items-center">
+              <MdInfo className="text-teal-600 text-2xl mr-3" />
+              <span><strong>Top Brands Used:</strong> Ozone, Franke, Bosch, Hafele, Saint-Gobain, Nirali, Greenlam, Hettich, Greenply, Century Ply, Kitply, Elica, Ebco, Faber, KAFF, Sharon Plywoods, Evershine, Merino, Sleek</span>
+            </div>
+            <div className="flex items-center">
+              <FaCheckCircle className="text-teal-600 text-2xl mr-3" />
+              <span><strong>Residential Projects Executed:</strong> More than 100</span>
+            </div>
+            <div className="flex items-center">
+              <FaTimesCircle className="text-red-600 text-2xl mr-3" />
+              <span><strong>Free Consultation Provided:</strong> No</span>
+            </div>
+            <div className="flex items-center">
+              <MdCheckCircle className="text-teal-600 text-2xl mr-3" />
+              <span><strong>Avg. Project Delivery Time:</strong> More than 60 days</span>
+            </div>
+            <div className="flex items-center">
+              <MdCheckCircle className="text-teal-600 text-2xl mr-3" />
+              <span><strong>Warranty of Work:</strong> 1 - 5 years</span>
+            </div>
+            <div className="flex items-center">
+              <FaTimesCircle className="text-red-600 text-2xl mr-3" />
+              <span><strong>EMI Option Provided:</strong> No</span>
+            </div>
+            <div className="flex items-center">
+              <MdCheckCircle className="text-teal-600 text-2xl mr-3" />
+              <span><strong>Loan Assistance Provided:</strong> Yes</span>
+            </div>
+            <div className="flex items-center">
+              <MdPerson className="text-teal-600 text-2xl mr-3" />
+              <span><strong>Expertise:</strong> Duplex House, Apartment, 3 BHK Flat Interior Design, 1 BHK Flat Interior Design, Villa, Bungalow, False Ceiling, Entertainment Units, Crockery Units, Pooja Room, Kids Room, Study Room, Dining Room, Wardrobe, 3D Interior Design, Space Planning, Bedroom, Kitchen, Living Room, Bathroom</span>
+            </div>
+            <div className="flex items-center">
+              <FaCheckCircle className="text-teal-600 text-2xl mr-3" />
+              <span><strong>Commercial Projects Executed:</strong> More than 50</span>
+            </div>
+            <div className="flex items-center">
+              <MdInfo className="text-teal-600 text-2xl mr-3" />
+              <span><strong>Architecture Type:</strong> Hospital Design Architects, Industrial Architect, Structural Design Architects, 2D&3D Elevation Drawing Architects, Commercial Architects, Retail Store Design Architects, Green/Sustainable Design Architects, Home Architects</span>
+            </div>
+            <div className="flex items-center">
+              <MdPerson className="text-teal-600 text-2xl mr-3" />
+              <span><strong>Contact Person:</strong> Richa Nitnaware</span>
+            </div>
+            <div className="flex items-center">
+              <MdLocationOn className="text-teal-600 text-2xl mr-3" />
+              <span><strong>Address:</strong> Plot 1, M.P. Nagar, Bhopal - 462011</span>
+            </div>
+            <div className="flex items-center">
+              <MdPhone className="text-teal-600 text-2xl mr-3" />
+              <span><strong>Contact Number:</strong> 08069873804</span>
+            </div>
+            <div className="flex items-center">
+              <MdCheckCircle className="text-teal-600 text-2xl mr-3" />
+              <span><strong>Document Verification:</strong> Bank details: Verified, Business details: Verified, ID Proof: Verified</span>
+            </div>
           </div>
         </div>
       </div>
