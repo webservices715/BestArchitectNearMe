@@ -1,56 +1,8 @@
 import React, { useEffect, useState } from "react";
+import ArchitectJson from "../data/Architect.json";
 import ArchitectCard from "../components/ArchitectCard";
 
-const architects = [
-  {
-    id:1,
-    image:
-      "https://images.pexels.com/photos/110469/pexels-photo-110469.jpeg?auto=compress&cs=tinysrgb&w=600",
-    name: "John Doe",
-    title: "Lead Architect",
-    description:
-      "John is a visionary architect with over 20 years of experience in sustainable design.",
-    rating: 4,
-    address: "Dehradun, Uttarakhand",
-    phone: "(123) 456-7890",
-    country: "India",
-    state: "Uttarakhand",
-    city: "Dehradun",
-    specialties: ["Residential", "Sustainable Design"],
-    experience: "20+ years",
-    certifications: ["LEED AP"],
-    styles: ["Modern", "Contemporary"],
-    social: [
-      { platform: "Facebook", url: "https://facebook.com" },
-      { platform: "Twitter", url: "https://twitter.com" },
-      { platform: "LinkedIn", url: "https://linkedin.com" },
-    ],
-  },
-  {
-    id:2,
-    image:
-      "https://images.pexels.com/photos/3333923/pexels-photo-3333923.jpeg?auto=compress&cs=tinysrgb&w=600",
-    name: "Jane Smith",
-    title: "Senior Architect",
-    description:
-      "Jane has a keen eye for detail and has been part of numerous high-profile projects.",
-    rating: 5,
-    address: "Lucknow, Uttarpradesh",
-    phone: "(987) 654-3210",
-    country: "India",
-    state: "Uttarpradesh",
-    city: "Lucknow",
-    specialties: ["Commercial", "Interior Design"],
-    experience: "15 years",
-    certifications: ["AIA Member"],
-    styles: ["Industrial", "Minimalist"],
-    social: [
-      { platform: "Facebook", url: "https://facebook.com" },
-      { platform: "Twitter", url: "https://twitter.com" },
-      { platform: "LinkedIn", url: "https://linkedin.com" },
-    ],
-  },
-];
+const architects = ArchitectJson || [];
 
 const Architects = () => {
   useEffect(() => {
