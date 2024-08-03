@@ -3,6 +3,7 @@ import ArchitectCard from "../components/ArchitectCard";
 
 const architects = [
   {
+    id:1,
     image:
       "https://images.pexels.com/photos/110469/pexels-photo-110469.jpeg?auto=compress&cs=tinysrgb&w=600",
     name: "John Doe",
@@ -26,6 +27,7 @@ const architects = [
     ],
   },
   {
+    id:2,
     image:
       "https://images.pexels.com/photos/3333923/pexels-photo-3333923.jpeg?auto=compress&cs=tinysrgb&w=600",
     name: "Jane Smith",

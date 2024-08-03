@@ -10,6 +10,7 @@ import BlogPage from "./components/BlogPage";
 import Blog from "./Pages/Blog";
 import Architects from "./Pages/Architects";
 import Hiring from "./Pages/Hiring";
+import ArchitectDetail from "./Pages/ArchitectDetail";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -36,6 +37,8 @@ function App() {
             <Route path="/blogs" element={<Blog />} />
             <Route path="/architects" element={<Architects />} />
             <Route path="/hiring" element={<Hiring />} />
+            <Route path="/architectdetail/:id" Component={ArchitectDetail} />
+
           </Routes>
           <Footer />
         </>
