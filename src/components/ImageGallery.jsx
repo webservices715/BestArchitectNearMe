@@ -42,8 +42,8 @@ const images = [
 const ImageGallery = () => {
   const [showAll, setShowAll] = useState(false);
   const largeImage = images[0];
-  const initialSmallImages = images.slice(1, 4); // First 3 images
-  const extraSmallImages = images.slice(4); // Remaining images
+  const initialSmallImages = images.slice(1, 5); // First 4 images
+  const extraSmallImages = images.slice(5); // Remaining images
 
   return (
     <div className="container mx-auto px-5 py-2 lg:px-32 lg:pt-24">
@@ -106,26 +106,28 @@ const ImageGallery = () => {
       </div>
 
       {/* Expandable section with arrow icon */}
-      <div className="relative mt-4">
-        <div
-          onClick={() => setShowAll(!showAll)}
-          className="absolute inset-0 bg-black bg-opacity-50 flex justify-center items-center text-white cursor-pointer transition-opacity duration-300"
-          style={{ opacity: showAll ? 0 : 1 }}
-        >
-          <svg
-            className="w-8 h-8 text-black"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
+      {extraSmallImages.length > 0 && (
+        <div className="relative mt-4">
+          <div
+            onClick={() => setShowAll(!showAll)}
+            className="absolute inset-0 bg-black bg-opacity-50 flex justify-center items-center text-white cursor-pointer transition-opacity duration-300"
+            style={{ opacity: showAll ? 0 : 1 }}
           >
-            <path d="M19 9l-7 7-7-7" />
-          </svg>
+            <svg
+              className="w-8 h-8 text-black"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <path d="M19 9l-7 7-7-7" />
+            </svg>
+          </div>
         </div>
-      </div>
+      )}
     </div>
   );
 };
