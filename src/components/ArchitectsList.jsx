@@ -124,7 +124,7 @@ const ArchitectProfiles = () => {
         Find Best & Popular Architects Near you
       </p>
       <div className="flex flex-col lg:flex-row lg:items-start lg:space-x-2 lg:mx-12 mx-2 space-y-8 lg:space-y-0">
-        <div className="flex flex-col space-y-8 lg:w-[75%]">
+        <div className="flex flex-col items-center space-y-8 lg:w-[75%]">
           {architects.map((architect, index) => (
             <div
               key={index}
@@ -218,6 +218,12 @@ const ArchitectProfiles = () => {
               </div>
             </div>
           ))}
+            <NavLink
+        to="/architects"
+        className="cursor-pointer border border-green-400 shadow-sm rounded-full  py-3.5 px-7 mt-12 w-52 flex justify-center items-center text-gray-900 font-semibold  transition-all duration-500 ease-in-out hover:text-white hover:bg-green-500"
+      >
+        View All
+      </NavLink>
         </div>
 
         <div className="flex flex-col w-full lg:w-[40%]">
@@ -310,12 +316,7 @@ const ArchitectProfiles = () => {
         </div>
 
       </div>
-      <NavLink
-        to="/blogs"
-        className="cursor-pointer border border-green-400 shadow-sm rounded-full py-3.5 px-7 mt-12 w-52 flex justify-center items-center text-gray-900 font-semibold mx-auto transition-all duration-500 ease-in-out hover:text-white hover:bg-green-500"
-      >
-        View All
-      </NavLink>
+    
     </div>
   );
 };

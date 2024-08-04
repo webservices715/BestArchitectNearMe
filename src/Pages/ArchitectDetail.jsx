@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import BookAppointment from '../components/BookAppointment';
 import ImageGallery from '../components/ImageGallery';
@@ -6,6 +6,10 @@ import OverView from '../components/OverView';
 import ProfileInfo from '../components/ProfileInfo';
 
 function ArchitectDetail() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const location = useLocation();
   const searchParams = new URLSearchParams(location.search);
 

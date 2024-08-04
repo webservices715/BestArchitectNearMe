@@ -3,7 +3,6 @@ import { NavLink, useLocation } from "react-router-dom";
 import mobilenav from "../assets/mobilenav.png";
 import { IoIosLogIn } from "react-icons/io";
 import { AiOutlineAlignRight } from "react-icons/ai";
-import { CiSearch } from "react-icons/ci";
 import {
   FaWhatsapp,
   FaFacebook,
@@ -16,7 +15,6 @@ import { FiX } from "react-icons/fi";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const [searchOpen, setSearchOpen] = useState(false);
   const [showNavbar, setShowNavbar] = useState(true);
   const [scrollPos, setScrollPos] = useState(0);
   const location = useLocation(); // Hook to get the current location
@@ -118,12 +116,6 @@ function Navbar() {
                 Contact
               </NavLink>
             </div>
-            <button
-              className={`focus:outline-none hover:bg-red-500 hover:text-white transition-all duration-500 ease-in-out transform  ${ isHomePage ? "text-black" : "text-black"} hover:scale-105 rounded-full ml-5 px-2 py-2 `}
-              onClick={() => setSearchOpen(true)}
-            >
-              <CiSearch size={26} />
-            </button>
           </div>
 
           {/* Toggle icon */}
@@ -136,7 +128,11 @@ function Navbar() {
                 <FiX size={25} />
               ) : (
                 <AiOutlineAlignRight
-                  className={`rounded-full border-2  ${ isHomePage ? "border-white" : "border-black"}  p-2 hover:bg-red-500 transition-all duration-500 ease-in-out transform   ${ isHomePage ? "text-black" : "text-black hover:text-black"}  hover:scale-105`}
+                  className={`rounded-full border-2  ${
+                    isHomePage ? "border-white" : "border-black"
+                  }  p-2 hover:bg-red-500 transition-all duration-500 ease-in-out transform   ${
+                    isHomePage ? "text-black" : "text-black hover:text-black"
+                  }  hover:scale-105`}
                   size={50}
                 />
               )}
@@ -145,7 +141,10 @@ function Navbar() {
 
           {/* Phone number and WhatsApp icon for large screens */}
           <div className="hidden md:flex items-center space-x-6">
-            <NavLink to={"/contact"} className="hidden sm:flex items-center gap-2 focus:outline-none bg-gradient-to-r from-[#ee4242] to-[#b30909] hover:text-black hover:bg-transparent  transition-all duration-500 ease-in-out transform hover:scale-105 text-white text-lg py-3 px-4  rounded-md ">
+            <NavLink
+              to={"/contact"}
+              className="hidden sm:flex items-center gap-2 focus:outline-none bg-gradient-to-r from-[#ee4242] to-[#b30909] hover:text-black hover:bg-transparent  transition-all duration-500 ease-in-out transform hover:scale-105 text-white text-lg py-3 px-4  rounded-md "
+            >
               Enroll Now <IoIosLogIn size={25} />
             </NavLink>
           </div>
@@ -273,30 +272,6 @@ function Navbar() {
             </div>
           </div>
         </div>
-
-        {/* Search Overlay */}
-        {searchOpen && (
-          <div className="fixed  inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50">
-            <div className="text-white p-6 rounded-lg w-full max-w-full relative">
-              <button
-                className={`absolute top-4 right-4`}
-                onClick={() => setSearchOpen(false)}
-              >
-                <FiX size={40} />
-              </button>
-              <div className="flex items-center justify-center h-full">
-                <input
-                  type="text"
-                  placeholder="Search..."
-                  className="w-full max-w-2xl px-4 py-6 rounded-l-lg border-none outline-none text-white"
-                />
-                <button className="bg-red-500 text-white px-8 py-[1.37rem] rounded-r-lg flex items-center">
-                  <CiSearch size={30} />
-                </button>
-              </div>
-            </div>
-          </div>
-        )}
       </nav>
     </>
   );
